@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "N4fHyWXiIXld5/c6kgWOhn52cpw/kicxduq0CrVZ09E=",
+  "Hash": "dODSG8VLMJAyfIQpyWlhjVSnY9k3/X3mFjP7ge2ZLNg=",
   "Source": "BookStore",
   "BasePath": "_content/BookStore",
   "Mode": "Default",
@@ -1277,10 +1277,10 @@
       "OriginalItemSpec": "C:\\Users\\DR.Mahmoud\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\8.0.11\\staticwebassets\\V5\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BookStore.styles.css",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BookStore.styles.css",
       "SourceId": "BookStore",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/BookStore",
       "RelativePath": "BookStore#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -1295,13 +1295,13 @@
       "Integrity": "HZgX4TCrvwKdnkxS7SZ2vwF82DCeEHk8z2HQFIvuWVY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BookStore.styles.css"
+      "OriginalItemSpec": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BookStore.styles.css"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BookStore.bundle.scp.css",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BookStore.bundle.scp.css",
       "SourceId": "BookStore",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/BookStore",
       "RelativePath": "BookStore#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
@@ -1316,10 +1316,10 @@
       "Integrity": "HZgX4TCrvwKdnkxS7SZ2vwF82DCeEHk8z2HQFIvuWVY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BookStore.bundle.scp.css"
+      "OriginalItemSpec": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BookStore.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\css\\ajax-loader.gif",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\css\\ajax-loader.gif",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1340,7 +1340,7 @@
       "OriginalItemSpec": "wwwroot\\css\\ajax-loader.gif"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\css\\vendor.css",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\css\\vendor.css",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1361,7 +1361,7 @@
       "OriginalItemSpec": "wwwroot\\css\\vendor.css"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image-bg-1.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image-bg-1.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1382,7 +1382,7 @@
       "OriginalItemSpec": "wwwroot\\images\\banner-image-bg-1.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image-bg-2.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image-bg-2.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1403,7 +1403,7 @@
       "OriginalItemSpec": "wwwroot\\images\\banner-image-bg-2.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image-bg.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image-bg.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1424,7 +1424,7 @@
       "OriginalItemSpec": "wwwroot\\images\\banner-image-bg.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1445,7 +1445,7 @@
       "OriginalItemSpec": "wwwroot\\images\\banner-image.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image1.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image1.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1466,7 +1466,7 @@
       "OriginalItemSpec": "wwwroot\\images\\banner-image1.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image2.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image2.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1487,7 +1487,7 @@
       "OriginalItemSpec": "wwwroot\\images\\banner-image2.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image3.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image3.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1508,7 +1508,7 @@
       "OriginalItemSpec": "wwwroot\\images\\banner-image3.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\cart-item1.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\cart-item1.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1529,7 +1529,7 @@
       "OriginalItemSpec": "wwwroot\\images\\cart-item1.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\cart-item2.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\cart-item2.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1550,7 +1550,7 @@
       "OriginalItemSpec": "wwwroot\\images\\cart-item2.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\category1.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\category1.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1571,7 +1571,7 @@
       "OriginalItemSpec": "wwwroot\\images\\category1.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\category2.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\category2.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1592,7 +1592,7 @@
       "OriginalItemSpec": "wwwroot\\images\\category2.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\category3.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\category3.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1613,7 +1613,7 @@
       "OriginalItemSpec": "wwwroot\\images\\category3.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\category4.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\category4.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1634,7 +1634,7 @@
       "OriginalItemSpec": "wwwroot\\images\\category4.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\commentor-item1.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\commentor-item1.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1655,7 +1655,7 @@
       "OriginalItemSpec": "wwwroot\\images\\commentor-item1.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\commentor-item2.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\commentor-item2.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1676,7 +1676,7 @@
       "OriginalItemSpec": "wwwroot\\images\\commentor-item2.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\commentor-item3.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\commentor-item3.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1697,7 +1697,7 @@
       "OriginalItemSpec": "wwwroot\\images\\commentor-item3.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\dhl.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\dhl.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1718,7 +1718,7 @@
       "OriginalItemSpec": "wwwroot\\images\\dhl.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item1.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item1.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1739,7 +1739,7 @@
       "OriginalItemSpec": "wwwroot\\images\\insta-item1.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item2.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item2.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1760,7 +1760,7 @@
       "OriginalItemSpec": "wwwroot\\images\\insta-item2.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item3.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item3.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1781,7 +1781,7 @@
       "OriginalItemSpec": "wwwroot\\images\\insta-item3.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item4.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item4.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1802,7 +1802,7 @@
       "OriginalItemSpec": "wwwroot\\images\\insta-item4.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item5.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item5.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1823,7 +1823,7 @@
       "OriginalItemSpec": "wwwroot\\images\\insta-item5.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item6.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item6.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1844,7 +1844,7 @@
       "OriginalItemSpec": "wwwroot\\images\\insta-item6.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image1.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image1.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1865,7 +1865,7 @@
       "OriginalItemSpec": "wwwroot\\images\\item-image1.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image10.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image10.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1886,7 +1886,7 @@
       "OriginalItemSpec": "wwwroot\\images\\item-image10.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image11.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image11.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1907,7 +1907,7 @@
       "OriginalItemSpec": "wwwroot\\images\\item-image11.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image12.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image12.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1928,7 +1928,7 @@
       "OriginalItemSpec": "wwwroot\\images\\item-image12.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image2.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image2.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1949,7 +1949,7 @@
       "OriginalItemSpec": "wwwroot\\images\\item-image2.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image3.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image3.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1970,7 +1970,7 @@
       "OriginalItemSpec": "wwwroot\\images\\item-image3.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image4.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image4.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -1991,7 +1991,7 @@
       "OriginalItemSpec": "wwwroot\\images\\item-image4.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image5.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image5.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2012,7 +2012,7 @@
       "OriginalItemSpec": "wwwroot\\images\\item-image5.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image6.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image6.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2033,7 +2033,7 @@
       "OriginalItemSpec": "wwwroot\\images\\item-image6.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image7.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image7.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2054,7 +2054,7 @@
       "OriginalItemSpec": "wwwroot\\images\\item-image7.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image8.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image8.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2075,7 +2075,7 @@
       "OriginalItemSpec": "wwwroot\\images\\item-image8.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image9.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image9.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2096,7 +2096,7 @@
       "OriginalItemSpec": "wwwroot\\images\\item-image9.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\main-logo.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\main-logo.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2117,7 +2117,7 @@
       "OriginalItemSpec": "wwwroot\\images\\main-logo.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\mastercard.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\mastercard.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2138,7 +2138,7 @@
       "OriginalItemSpec": "wwwroot\\images\\mastercard.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\paypal.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\paypal.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2159,7 +2159,7 @@
       "OriginalItemSpec": "wwwroot\\images\\paypal.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-img.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-img.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2180,7 +2180,7 @@
       "OriginalItemSpec": "wwwroot\\images\\post-img.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item1.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item1.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2201,7 +2201,7 @@
       "OriginalItemSpec": "wwwroot\\images\\post-item1.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item10.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item10.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2222,7 +2222,7 @@
       "OriginalItemSpec": "wwwroot\\images\\post-item10.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item2.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item2.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2243,7 +2243,7 @@
       "OriginalItemSpec": "wwwroot\\images\\post-item2.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item3.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item3.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2264,7 +2264,7 @@
       "OriginalItemSpec": "wwwroot\\images\\post-item3.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item4.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item4.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2285,7 +2285,7 @@
       "OriginalItemSpec": "wwwroot\\images\\post-item4.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item5.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item5.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2306,7 +2306,7 @@
       "OriginalItemSpec": "wwwroot\\images\\post-item5.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item6.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item6.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2327,7 +2327,7 @@
       "OriginalItemSpec": "wwwroot\\images\\post-item6.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item7.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item7.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2348,7 +2348,7 @@
       "OriginalItemSpec": "wwwroot\\images\\post-item7.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item8.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item8.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2369,7 +2369,7 @@
       "OriginalItemSpec": "wwwroot\\images\\post-item8.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item9.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item9.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2390,7 +2390,7 @@
       "OriginalItemSpec": "wwwroot\\images\\post-item9.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item1.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item1.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2411,7 +2411,7 @@
       "OriginalItemSpec": "wwwroot\\images\\product-item1.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item10.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item10.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2432,7 +2432,7 @@
       "OriginalItemSpec": "wwwroot\\images\\product-item10.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item11.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item11.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2453,7 +2453,7 @@
       "OriginalItemSpec": "wwwroot\\images\\product-item11.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item12.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item12.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2474,7 +2474,7 @@
       "OriginalItemSpec": "wwwroot\\images\\product-item12.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item2.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item2.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2495,7 +2495,7 @@
       "OriginalItemSpec": "wwwroot\\images\\product-item2.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item3.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item3.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2516,7 +2516,7 @@
       "OriginalItemSpec": "wwwroot\\images\\product-item3.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item4.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item4.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2537,7 +2537,7 @@
       "OriginalItemSpec": "wwwroot\\images\\product-item4.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item5.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item5.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2558,7 +2558,7 @@
       "OriginalItemSpec": "wwwroot\\images\\product-item5.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item6.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item6.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2579,7 +2579,7 @@
       "OriginalItemSpec": "wwwroot\\images\\product-item6.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item7.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item7.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2600,7 +2600,7 @@
       "OriginalItemSpec": "wwwroot\\images\\product-item7.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item8.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item8.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2621,7 +2621,7 @@
       "OriginalItemSpec": "wwwroot\\images\\product-item8.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item9.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item9.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2642,7 +2642,7 @@
       "OriginalItemSpec": "wwwroot\\images\\product-item9.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-large-1.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-large-1.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2663,7 +2663,7 @@
       "OriginalItemSpec": "wwwroot\\images\\product-large-1.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-large-2.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-large-2.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2684,7 +2684,7 @@
       "OriginalItemSpec": "wwwroot\\images\\product-large-2.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-large-3.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-large-3.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2705,7 +2705,7 @@
       "OriginalItemSpec": "wwwroot\\images\\product-large-3.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-thumbnail-1.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-thumbnail-1.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2726,7 +2726,7 @@
       "OriginalItemSpec": "wwwroot\\images\\product-thumbnail-1.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-thumbnail-2.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-thumbnail-2.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2747,7 +2747,7 @@
       "OriginalItemSpec": "wwwroot\\images\\product-thumbnail-2.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-thumbnail-3.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-thumbnail-3.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2768,7 +2768,7 @@
       "OriginalItemSpec": "wwwroot\\images\\product-thumbnail-3.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\review-image1.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\review-image1.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2789,7 +2789,7 @@
       "OriginalItemSpec": "wwwroot\\images\\review-image1.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\review-image2.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\review-image2.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2810,7 +2810,7 @@
       "OriginalItemSpec": "wwwroot\\images\\review-image2.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\search-icon.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\search-icon.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2831,7 +2831,7 @@
       "OriginalItemSpec": "wwwroot\\images\\search-icon.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\shippingcard.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\shippingcard.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2852,7 +2852,7 @@
       "OriginalItemSpec": "wwwroot\\images\\shippingcard.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\single-image-about.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\single-image-about.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2873,7 +2873,7 @@
       "OriginalItemSpec": "wwwroot\\images\\single-image-about.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\single-image2.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\single-image2.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2894,7 +2894,7 @@
       "OriginalItemSpec": "wwwroot\\images\\single-image2.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\single-image2.png",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\single-image2.png",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2915,7 +2915,7 @@
       "OriginalItemSpec": "wwwroot\\images\\single-image2.png"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\single-post.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\single-post.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2936,7 +2936,7 @@
       "OriginalItemSpec": "wwwroot\\images\\single-post.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\visa.jpg",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\visa.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2957,7 +2957,7 @@
       "OriginalItemSpec": "wwwroot\\images\\visa.jpg"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\js\\ajax-loader.gif",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\js\\ajax-loader.gif",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2978,7 +2978,7 @@
       "OriginalItemSpec": "wwwroot\\js\\ajax-loader.gif"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\js\\jquery-1.11.0.min.js",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\js\\jquery-1.11.0.min.js",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -2999,7 +2999,7 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery-1.11.0.min.js"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\js\\plugins.js",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\js\\plugins.js",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -3020,7 +3020,7 @@
       "OriginalItemSpec": "wwwroot\\js\\plugins.js"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\js\\script.js",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\js\\script.js",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -3041,7 +3041,7 @@
       "OriginalItemSpec": "wwwroot\\js\\script.js"
     },
     {
-      "Identity": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\style.css",
+      "Identity": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\style.css",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\",
@@ -3065,7 +3065,7 @@
   "Endpoints": [
     {
       "Route": "BookStore.bundle.scp.css",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BookStore.bundle.scp.css",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BookStore.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3102,7 +3102,7 @@
     },
     {
       "Route": "BookStore.styles.css",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BookStore.styles.css",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BookStore.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3139,7 +3139,7 @@
     },
     {
       "Route": "BookStore.zk7abynole.bundle.scp.css",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BookStore.bundle.scp.css",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BookStore.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3184,7 +3184,7 @@
     },
     {
       "Route": "BookStore.zk7abynole.styles.css",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BookStore.styles.css",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BookStore.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3229,7 +3229,7 @@
     },
     {
       "Route": "css/ajax-loader.fypy1n2a1i.gif",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\css\\ajax-loader.gif",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\css\\ajax-loader.gif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3274,7 +3274,7 @@
     },
     {
       "Route": "css/ajax-loader.gif",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\css\\ajax-loader.gif",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\css\\ajax-loader.gif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3311,7 +3311,7 @@
     },
     {
       "Route": "css/vendor.0pho4qfttr.css",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\css\\vendor.css",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\css\\vendor.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3356,7 +3356,7 @@
     },
     {
       "Route": "css/vendor.css",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\css\\vendor.css",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\css\\vendor.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5613,7 +5613,7 @@
     },
     {
       "Route": "images/banner-image-bg-1.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image-bg-1.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image-bg-1.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5650,7 +5650,7 @@
     },
     {
       "Route": "images/banner-image-bg-1.wic1u0lckv.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image-bg-1.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image-bg-1.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5695,7 +5695,7 @@
     },
     {
       "Route": "images/banner-image-bg-2.17d38wpld6.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image-bg-2.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image-bg-2.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5740,7 +5740,7 @@
     },
     {
       "Route": "images/banner-image-bg-2.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image-bg-2.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image-bg-2.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5777,7 +5777,7 @@
     },
     {
       "Route": "images/banner-image-bg.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image-bg.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image-bg.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5814,7 +5814,7 @@
     },
     {
       "Route": "images/banner-image-bg.l4w8ws9oim.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image-bg.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image-bg.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5859,7 +5859,7 @@
     },
     {
       "Route": "images/banner-image.2ohzirrzmf.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5904,7 +5904,7 @@
     },
     {
       "Route": "images/banner-image.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5941,7 +5941,7 @@
     },
     {
       "Route": "images/banner-image1.25g1urc8bf.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image1.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image1.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5986,7 +5986,7 @@
     },
     {
       "Route": "images/banner-image1.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image1.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image1.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6023,7 +6023,7 @@
     },
     {
       "Route": "images/banner-image2.4ow5dwz22m.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image2.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image2.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6068,7 +6068,7 @@
     },
     {
       "Route": "images/banner-image2.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image2.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image2.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6105,7 +6105,7 @@
     },
     {
       "Route": "images/banner-image3.d5dmrrzulo.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image3.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image3.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6150,7 +6150,7 @@
     },
     {
       "Route": "images/banner-image3.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image3.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\banner-image3.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6187,7 +6187,7 @@
     },
     {
       "Route": "images/cart-item1.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\cart-item1.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\cart-item1.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6224,7 +6224,7 @@
     },
     {
       "Route": "images/cart-item1.ugv3kpdqxs.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\cart-item1.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\cart-item1.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6269,7 +6269,7 @@
     },
     {
       "Route": "images/cart-item2.hh6g9h67sp.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\cart-item2.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\cart-item2.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6314,7 +6314,7 @@
     },
     {
       "Route": "images/cart-item2.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\cart-item2.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\cart-item2.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6351,7 +6351,7 @@
     },
     {
       "Route": "images/category1.0fn9jeukcg.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\category1.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\category1.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6396,7 +6396,7 @@
     },
     {
       "Route": "images/category1.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\category1.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\category1.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6433,7 +6433,7 @@
     },
     {
       "Route": "images/category2.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\category2.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\category2.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6470,7 +6470,7 @@
     },
     {
       "Route": "images/category2.tg0rwzly7d.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\category2.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\category2.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6515,7 +6515,7 @@
     },
     {
       "Route": "images/category3.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\category3.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\category3.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6552,7 +6552,7 @@
     },
     {
       "Route": "images/category3.rqm672678m.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\category3.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\category3.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6597,7 +6597,7 @@
     },
     {
       "Route": "images/category4.7ts0zptt15.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\category4.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\category4.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6642,7 +6642,7 @@
     },
     {
       "Route": "images/category4.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\category4.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\category4.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6679,7 +6679,7 @@
     },
     {
       "Route": "images/commentor-item1.6mmxd3crwo.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\commentor-item1.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\commentor-item1.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6724,7 +6724,7 @@
     },
     {
       "Route": "images/commentor-item1.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\commentor-item1.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\commentor-item1.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6761,7 +6761,7 @@
     },
     {
       "Route": "images/commentor-item2.hjzquuqej1.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\commentor-item2.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\commentor-item2.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6806,7 +6806,7 @@
     },
     {
       "Route": "images/commentor-item2.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\commentor-item2.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\commentor-item2.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6843,7 +6843,7 @@
     },
     {
       "Route": "images/commentor-item3.7ve5qn6t3v.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\commentor-item3.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\commentor-item3.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6888,7 +6888,7 @@
     },
     {
       "Route": "images/commentor-item3.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\commentor-item3.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\commentor-item3.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6925,7 +6925,7 @@
     },
     {
       "Route": "images/dhl.d7rtu02hy1.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\dhl.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\dhl.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6970,7 +6970,7 @@
     },
     {
       "Route": "images/dhl.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\dhl.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\dhl.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7007,7 +7007,7 @@
     },
     {
       "Route": "images/insta-item1.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item1.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item1.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7044,7 +7044,7 @@
     },
     {
       "Route": "images/insta-item1.n6atmk6a0e.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item1.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item1.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7089,7 +7089,7 @@
     },
     {
       "Route": "images/insta-item2.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item2.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item2.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7126,7 +7126,7 @@
     },
     {
       "Route": "images/insta-item2.l162lts96i.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item2.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item2.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7171,7 +7171,7 @@
     },
     {
       "Route": "images/insta-item3.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item3.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item3.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7208,7 +7208,7 @@
     },
     {
       "Route": "images/insta-item3.pldf8nb68q.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item3.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item3.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7253,7 +7253,7 @@
     },
     {
       "Route": "images/insta-item4.6uvm1piqi1.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item4.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item4.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7298,7 +7298,7 @@
     },
     {
       "Route": "images/insta-item4.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item4.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item4.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7335,7 +7335,7 @@
     },
     {
       "Route": "images/insta-item5.a5hwuj562n.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item5.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item5.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7380,7 +7380,7 @@
     },
     {
       "Route": "images/insta-item5.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item5.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item5.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7417,7 +7417,7 @@
     },
     {
       "Route": "images/insta-item6.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item6.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item6.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7454,7 +7454,7 @@
     },
     {
       "Route": "images/insta-item6.ufblj4bnmx.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item6.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\insta-item6.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7499,7 +7499,7 @@
     },
     {
       "Route": "images/item-image1.4dfgpvj9cr.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image1.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image1.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7544,7 +7544,7 @@
     },
     {
       "Route": "images/item-image1.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image1.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image1.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7581,7 +7581,7 @@
     },
     {
       "Route": "images/item-image10.bqbdwtg64f.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image10.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image10.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7626,7 +7626,7 @@
     },
     {
       "Route": "images/item-image10.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image10.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image10.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7663,7 +7663,7 @@
     },
     {
       "Route": "images/item-image11.033rlq933s.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image11.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image11.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7708,7 +7708,7 @@
     },
     {
       "Route": "images/item-image11.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image11.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image11.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7745,7 +7745,7 @@
     },
     {
       "Route": "images/item-image12.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image12.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image12.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7782,7 +7782,7 @@
     },
     {
       "Route": "images/item-image12.ya2gva0voq.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image12.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image12.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7827,7 +7827,7 @@
     },
     {
       "Route": "images/item-image2.4bvhdhcxdb.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image2.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image2.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7872,7 +7872,7 @@
     },
     {
       "Route": "images/item-image2.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image2.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image2.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7909,7 +7909,7 @@
     },
     {
       "Route": "images/item-image3.gpdq723gqm.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image3.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image3.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7954,7 +7954,7 @@
     },
     {
       "Route": "images/item-image3.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image3.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image3.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7991,7 +7991,7 @@
     },
     {
       "Route": "images/item-image4.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image4.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image4.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8028,7 +8028,7 @@
     },
     {
       "Route": "images/item-image4.oq4889kxlw.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image4.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image4.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8073,7 +8073,7 @@
     },
     {
       "Route": "images/item-image5.ixndjxp9z7.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image5.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image5.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8118,7 +8118,7 @@
     },
     {
       "Route": "images/item-image5.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image5.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image5.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8155,7 +8155,7 @@
     },
     {
       "Route": "images/item-image6.gpr3y4gb8t.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image6.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image6.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8200,7 +8200,7 @@
     },
     {
       "Route": "images/item-image6.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image6.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image6.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8237,7 +8237,7 @@
     },
     {
       "Route": "images/item-image7.htn3em3ytd.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image7.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image7.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8282,7 +8282,7 @@
     },
     {
       "Route": "images/item-image7.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image7.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image7.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8319,7 +8319,7 @@
     },
     {
       "Route": "images/item-image8.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image8.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image8.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8356,7 +8356,7 @@
     },
     {
       "Route": "images/item-image8.kh4wurkobu.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image8.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image8.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8401,7 +8401,7 @@
     },
     {
       "Route": "images/item-image9.6om028cojj.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image9.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image9.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8446,7 +8446,7 @@
     },
     {
       "Route": "images/item-image9.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image9.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\item-image9.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8483,7 +8483,7 @@
     },
     {
       "Route": "images/main-logo.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\main-logo.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\main-logo.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8520,7 +8520,7 @@
     },
     {
       "Route": "images/main-logo.s4073khacj.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\main-logo.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\main-logo.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8565,7 +8565,7 @@
     },
     {
       "Route": "images/mastercard.cm4e9n9vpn.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\mastercard.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\mastercard.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8610,7 +8610,7 @@
     },
     {
       "Route": "images/mastercard.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\mastercard.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\mastercard.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8647,7 +8647,7 @@
     },
     {
       "Route": "images/paypal.i3ebvktxec.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\paypal.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\paypal.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8692,7 +8692,7 @@
     },
     {
       "Route": "images/paypal.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\paypal.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\paypal.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8729,7 +8729,7 @@
     },
     {
       "Route": "images/post-img.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-img.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-img.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8766,7 +8766,7 @@
     },
     {
       "Route": "images/post-img.nox2tlisas.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-img.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-img.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8811,7 +8811,7 @@
     },
     {
       "Route": "images/post-item1.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item1.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item1.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8848,7 +8848,7 @@
     },
     {
       "Route": "images/post-item1.zel5s3md5q.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item1.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item1.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8893,7 +8893,7 @@
     },
     {
       "Route": "images/post-item10.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item10.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item10.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8930,7 +8930,7 @@
     },
     {
       "Route": "images/post-item10.uxdzewuxry.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item10.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item10.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8975,7 +8975,7 @@
     },
     {
       "Route": "images/post-item2.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item2.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item2.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9012,7 +9012,7 @@
     },
     {
       "Route": "images/post-item2.s94t10bhy5.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item2.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item2.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9057,7 +9057,7 @@
     },
     {
       "Route": "images/post-item3.7btk92dgj6.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item3.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item3.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9102,7 +9102,7 @@
     },
     {
       "Route": "images/post-item3.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item3.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item3.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9139,7 +9139,7 @@
     },
     {
       "Route": "images/post-item4.gydvfni9hr.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item4.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item4.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9184,7 +9184,7 @@
     },
     {
       "Route": "images/post-item4.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item4.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item4.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9221,7 +9221,7 @@
     },
     {
       "Route": "images/post-item5.9wjqs8sure.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item5.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item5.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9266,7 +9266,7 @@
     },
     {
       "Route": "images/post-item5.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item5.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item5.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9303,7 +9303,7 @@
     },
     {
       "Route": "images/post-item6.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item6.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item6.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9340,7 +9340,7 @@
     },
     {
       "Route": "images/post-item6.wup9sax53c.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item6.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item6.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9385,7 +9385,7 @@
     },
     {
       "Route": "images/post-item7.4kcsu4fju0.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item7.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item7.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9430,7 +9430,7 @@
     },
     {
       "Route": "images/post-item7.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item7.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item7.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9467,7 +9467,7 @@
     },
     {
       "Route": "images/post-item8.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item8.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item8.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9504,7 +9504,7 @@
     },
     {
       "Route": "images/post-item8.tbdlktw4i5.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item8.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item8.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9549,7 +9549,7 @@
     },
     {
       "Route": "images/post-item9.3wdxcvrdmc.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item9.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item9.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9594,7 +9594,7 @@
     },
     {
       "Route": "images/post-item9.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item9.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\post-item9.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9631,7 +9631,7 @@
     },
     {
       "Route": "images/product-item1.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item1.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item1.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9668,7 +9668,7 @@
     },
     {
       "Route": "images/product-item1.xbx7az2gtn.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item1.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item1.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9713,7 +9713,7 @@
     },
     {
       "Route": "images/product-item10.25rmflr2sg.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item10.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item10.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9758,7 +9758,7 @@
     },
     {
       "Route": "images/product-item10.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item10.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item10.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9795,7 +9795,7 @@
     },
     {
       "Route": "images/product-item11.06501y3tox.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item11.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item11.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9840,7 +9840,7 @@
     },
     {
       "Route": "images/product-item11.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item11.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item11.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9877,7 +9877,7 @@
     },
     {
       "Route": "images/product-item12.1wc8y5mw1r.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item12.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item12.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9922,7 +9922,7 @@
     },
     {
       "Route": "images/product-item12.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item12.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item12.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9959,7 +9959,7 @@
     },
     {
       "Route": "images/product-item2.pgx69zma28.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item2.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item2.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10004,7 +10004,7 @@
     },
     {
       "Route": "images/product-item2.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item2.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item2.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10041,7 +10041,7 @@
     },
     {
       "Route": "images/product-item3.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item3.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item3.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10078,7 +10078,7 @@
     },
     {
       "Route": "images/product-item3.x24z52xo7n.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item3.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item3.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10123,7 +10123,7 @@
     },
     {
       "Route": "images/product-item4.8xmeofsrd9.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item4.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item4.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10168,7 +10168,7 @@
     },
     {
       "Route": "images/product-item4.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item4.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item4.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10205,7 +10205,7 @@
     },
     {
       "Route": "images/product-item5.13jgx1k8yc.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item5.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item5.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10250,7 +10250,7 @@
     },
     {
       "Route": "images/product-item5.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item5.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item5.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10287,7 +10287,7 @@
     },
     {
       "Route": "images/product-item6.anjt2ful43.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item6.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item6.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10332,7 +10332,7 @@
     },
     {
       "Route": "images/product-item6.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item6.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item6.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10369,7 +10369,7 @@
     },
     {
       "Route": "images/product-item7.9kh1pdor9l.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item7.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item7.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10414,7 +10414,7 @@
     },
     {
       "Route": "images/product-item7.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item7.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item7.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10451,7 +10451,7 @@
     },
     {
       "Route": "images/product-item8.9pj3ypyveg.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item8.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item8.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10496,7 +10496,7 @@
     },
     {
       "Route": "images/product-item8.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item8.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item8.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10533,7 +10533,7 @@
     },
     {
       "Route": "images/product-item9.pa10egf8ck.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item9.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item9.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10578,7 +10578,7 @@
     },
     {
       "Route": "images/product-item9.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item9.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-item9.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10615,7 +10615,7 @@
     },
     {
       "Route": "images/product-large-1.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-large-1.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-large-1.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10652,7 +10652,7 @@
     },
     {
       "Route": "images/product-large-1.upldgctwbt.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-large-1.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-large-1.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10697,7 +10697,7 @@
     },
     {
       "Route": "images/product-large-2.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-large-2.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-large-2.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10734,7 +10734,7 @@
     },
     {
       "Route": "images/product-large-2.wz9snaymzm.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-large-2.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-large-2.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10779,7 +10779,7 @@
     },
     {
       "Route": "images/product-large-3.8gnmelies1.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-large-3.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-large-3.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10824,7 +10824,7 @@
     },
     {
       "Route": "images/product-large-3.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-large-3.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-large-3.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10861,7 +10861,7 @@
     },
     {
       "Route": "images/product-thumbnail-1.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-thumbnail-1.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-thumbnail-1.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10898,7 +10898,7 @@
     },
     {
       "Route": "images/product-thumbnail-1.tzgm0wshwi.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-thumbnail-1.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-thumbnail-1.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10943,7 +10943,7 @@
     },
     {
       "Route": "images/product-thumbnail-2.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-thumbnail-2.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-thumbnail-2.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10980,7 +10980,7 @@
     },
     {
       "Route": "images/product-thumbnail-2.z7ui0grz4h.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-thumbnail-2.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-thumbnail-2.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11025,7 +11025,7 @@
     },
     {
       "Route": "images/product-thumbnail-3.edwjtfi5nn.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-thumbnail-3.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-thumbnail-3.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11070,7 +11070,7 @@
     },
     {
       "Route": "images/product-thumbnail-3.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-thumbnail-3.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\product-thumbnail-3.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11107,7 +11107,7 @@
     },
     {
       "Route": "images/review-image1.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\review-image1.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\review-image1.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11144,7 +11144,7 @@
     },
     {
       "Route": "images/review-image1.n1vvor8h22.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\review-image1.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\review-image1.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11189,7 +11189,7 @@
     },
     {
       "Route": "images/review-image2.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\review-image2.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\review-image2.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11226,7 +11226,7 @@
     },
     {
       "Route": "images/review-image2.my6rge93j4.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\review-image2.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\review-image2.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11271,7 +11271,7 @@
     },
     {
       "Route": "images/search-icon.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\search-icon.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\search-icon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11308,7 +11308,7 @@
     },
     {
       "Route": "images/search-icon.vgc6kiloyi.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\search-icon.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\search-icon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11353,7 +11353,7 @@
     },
     {
       "Route": "images/shippingcard.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\shippingcard.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\shippingcard.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11390,7 +11390,7 @@
     },
     {
       "Route": "images/shippingcard.yr0x0edez1.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\shippingcard.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\shippingcard.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11435,7 +11435,7 @@
     },
     {
       "Route": "images/single-image-about.a4dkjjtylo.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\single-image-about.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\single-image-about.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11480,7 +11480,7 @@
     },
     {
       "Route": "images/single-image-about.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\single-image-about.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\single-image-about.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11517,7 +11517,7 @@
     },
     {
       "Route": "images/single-image2.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\single-image2.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\single-image2.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11554,7 +11554,7 @@
     },
     {
       "Route": "images/single-image2.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\single-image2.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\single-image2.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11591,7 +11591,7 @@
     },
     {
       "Route": "images/single-image2.qvg312aoqn.png",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\single-image2.png",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\single-image2.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11636,7 +11636,7 @@
     },
     {
       "Route": "images/single-image2.r6id1rb4fk.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\single-image2.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\single-image2.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11681,7 +11681,7 @@
     },
     {
       "Route": "images/single-post.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\single-post.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\single-post.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11718,7 +11718,7 @@
     },
     {
       "Route": "images/single-post.k9ju209hrx.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\single-post.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\single-post.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11763,7 +11763,7 @@
     },
     {
       "Route": "images/visa.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\visa.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\visa.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11800,7 +11800,7 @@
     },
     {
       "Route": "images/visa.ri0860hfun.jpg",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\visa.jpg",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\images\\visa.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11845,7 +11845,7 @@
     },
     {
       "Route": "js/ajax-loader.fypy1n2a1i.gif",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\js\\ajax-loader.gif",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\js\\ajax-loader.gif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11890,7 +11890,7 @@
     },
     {
       "Route": "js/ajax-loader.gif",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\js\\ajax-loader.gif",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\js\\ajax-loader.gif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11927,7 +11927,7 @@
     },
     {
       "Route": "js/jquery-1.11.0.min.js",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\js\\jquery-1.11.0.min.js",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\js\\jquery-1.11.0.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11964,7 +11964,7 @@
     },
     {
       "Route": "js/jquery-1.11.0.min.vk81rehhpd.js",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\js\\jquery-1.11.0.min.js",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\js\\jquery-1.11.0.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -12009,7 +12009,7 @@
     },
     {
       "Route": "js/plugins.js",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\js\\plugins.js",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\js\\plugins.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -12046,7 +12046,7 @@
     },
     {
       "Route": "js/plugins.y8huxuxbtj.js",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\js\\plugins.js",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\js\\plugins.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -12091,7 +12091,7 @@
     },
     {
       "Route": "js/script.js",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\js\\script.js",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\js\\script.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -12128,7 +12128,7 @@
     },
     {
       "Route": "js/script.wqijeiqp4n.js",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\js\\script.js",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\js\\script.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -12173,7 +12173,7 @@
     },
     {
       "Route": "style.432qqg1jcs.css",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\style.css",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\style.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -12218,7 +12218,7 @@
     },
     {
       "Route": "style.css",
-      "AssetFile": "C:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\style.css",
+      "AssetFile": "c:\\Users\\DR.Mahmoud\\vscode-projects\\Ejada-Online-BookStore\\wwwroot\\style.css",
       "Selectors": [],
       "ResponseHeaders": [
         {

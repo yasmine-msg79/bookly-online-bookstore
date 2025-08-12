@@ -923,3 +923,7 @@ c:\Users\DR.Mahmoud\vscode-projects\Ejada-Online-BookStore\obj\Debug\net8.0\refi
 c:\Users\DR.Mahmoud\vscode-projects\Ejada-Online-BookStore\obj\Debug\net8.0\BookStore.pdb
 C:\Users\DR.Mahmoud\vscode-projects\Ejada-Online-BookStore\obj\Debug\net8.0\BookStore.genruntimeconfig.cache
 C:\Users\DR.Mahmoud\vscode-projects\Ejada-Online-BookStore\obj\Debug\net8.0\ref\BookStore.dll
+c:\Users\DR.Mahmoud\vscode-projects\Ejada-Online-BookStore\bin\Debug\net8.0\Microsoft.OpenApi.dll
+c:\Users\DR.Mahmoud\vscode-projects\Ejada-Online-BookStore\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+c:\Users\DR.Mahmoud\vscode-projects\Ejada-Online-BookStore\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+c:\Users\DR.Mahmoud\vscode-projects\Ejada-Online-BookStore\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll

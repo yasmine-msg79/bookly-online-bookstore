@@ -1,3 +1,6 @@
 # Ignore appsettings files
 appsettings.json
 appsettings.*.json
+appsettings.Development.json
+
+.fake

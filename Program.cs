@@ -1,6 +1,9 @@
 using BookStore.Data;
+using BookStore.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using BookStore.Services;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace BookStore
 {
@@ -26,7 +29,23 @@ namespace BookStore
                 options.LoginPath = "/Account/Login";  // redirect to login page if unauthorized
             });
 
+            // add repository 
+            builder.Services.AddScoped<IBookRepository, BookRepository>();
+            builder.Services.AddScoped<IStockLogRepository, StockLogRepository>();
+            builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+
+            // add services
+            builder.Services.AddScoped<IBookService, BookService>();
+            builder.Services.AddScoped<ICategoryService, CategoryService>();
+            builder.Services.AddScoped<IStockService, StockService>();
+
+
             builder.Services.AddControllersWithViews();
+
+            // activate swagger
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
+
 
             var app = builder.Build();
 
@@ -37,6 +56,13 @@ namespace BookStore
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI();
+            }
+
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
