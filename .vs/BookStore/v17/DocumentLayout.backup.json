@@ -1,7 +1,20 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\1Ejada_Back\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\VS Projects\\BookStore\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AA3F8197-4CBC-4CD2-9B5F-A761B4C744C8}|BookStore.csproj|d:\\vs projects\\bookstore\\migrations\\20250801092533_addsuperadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA3F8197-4CBC-4CD2-9B5F-A761B4C744C8}|BookStore.csproj|solutionrelative:migrations\\20250801092533_addsuperadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA3F8197-4CBC-4CD2-9B5F-A761B4C744C8}|BookStore.csproj|d:\\vs projects\\bookstore\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA3F8197-4CBC-4CD2-9B5F-A761B4C744C8}|BookStore.csproj|solutionrelative:models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA3F8197-4CBC-4CD2-9B5F-A761B4C744C8}|BookStore.csproj|d:\\vs projects\\bookstore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA3F8197-4CBC-4CD2-9B5F-A761B4C744C8}|BookStore.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +22,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\VS Projects\\BookStore\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\VS Projects\\BookStore\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T12:54:17.933Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20250801092533_AddSuperAdmin.cs",
+              "DocumentMoniker": "D:\\VS Projects\\BookStore\\Migrations\\20250801092533_AddSuperAdmin.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250801092533_AddSuperAdmin.cs",
+              "ToolTip": "D:\\VS Projects\\BookStore\\Migrations\\20250801092533_AddSuperAdmin.cs",
+              "RelativeToolTip": "Migrations\\20250801092533_AddSuperAdmin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T09:25:34.188Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -22,16 +57,23 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "D:\\VS Projects\\BookStore\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Models\\ApplicationUser.cs",
+              "ToolTip": "D:\\VS Projects\\BookStore\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:04:31.372Z",
+              "EditorCaption": ""
             }
           ]
         }
       ]
     }
-  ],
-  "FramesPinnedWhenTheyWereClosed": [
-    -630380085,
-    259257042,
-    1447875793,
-    1874414229
   ]
 }
