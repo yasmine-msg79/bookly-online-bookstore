@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Ejada\\BookStore.csproj": {}
+    "E:\\1Ejada_Back\\BookStore.csproj": {}
   },
   "projects": {
-    "D:\\Ejada\\BookStore.csproj": {
+    "E:\\1Ejada_Back\\BookStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Ejada\\BookStore.csproj",
+        "projectUniqueName": "E:\\1Ejada_Back\\BookStore.csproj",
         "projectName": "BookStore",
-        "projectPath": "D:\\Ejada\\BookStore.csproj",
+        "projectPath": "E:\\1Ejada_Back\\BookStore.csproj",
         "packagesPath": "C:\\Users\\AL-FAJR\\.nuget\\packages\\",
-        "outputPath": "D:\\Ejada\\obj\\",
+        "outputPath": "E:\\1Ejada_Back\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
