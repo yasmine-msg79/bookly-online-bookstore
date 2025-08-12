@@ -11,7 +11,7 @@ namespace BookStore.Models
         public string FirstName { get; set; }
         [Required]
         public string LastName { get; set; }
-        public string ProfileImageURL { get; set; }
+        public string? ProfileImageURL { get; set; }
         public Role Role { get; set; }
         public Gender Gender { get; set; }
 

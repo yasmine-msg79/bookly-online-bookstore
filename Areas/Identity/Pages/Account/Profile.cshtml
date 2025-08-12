@@ -1,0 +1,60 @@
+﻿@page
+@model BookStore.Areas.Identity.Pages.Account.ProfileModel
+@{
+    ViewData["Title"] = "User Profile";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm rounded-4 p-4">
+                <h2 class="mb-4 text-center text-primary fw-bold">@ViewData["Title"]</h2>
+
+                <form method="post" enctype="multipart/form-data" novalidate>
+                    <div class="mb-3">
+                        <label asp-for="Input.UserName" class="form-label fw-semibold">Username</label>
+                        <input asp-for="Input.UserName" class="form-control" readonly />
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Input.Email" class="form-label fw-semibold">Email</label>
+                        <input asp-for="Input.Email" class="form-control" readonly />
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Input.FirstName" class="form-label fw-semibold">First Name</label>
+                        <input asp-for="Input.FirstName" class="form-control" placeholder="Enter your first name" />
+                        <span asp-validation-for="Input.FirstName" class="text-danger small"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Input.LastName" class="form-label fw-semibold">Last Name</label>
+                        <input asp-for="Input.LastName" class="form-control" placeholder="Enter your last name" />
+                        <span asp-validation-for="Input.LastName" class="text-danger small"></span>
+                    </div>
+
+                    @if (!string.IsNullOrEmpty(Model.Input.ProfileImageUrl))
+                    {
+                        <div class="mb-4 text-center">
+                            <img src="@Model.Input.ProfileImageUrl" alt="Profile Image" class="rounded-circle img-thumbnail" style="width: 140px; height: 140px; object-fit: cover;" />
+                        </div>
+                    }
+
+                    <div class="mb-4">
+                        <label for="ProfileImageFile" class="form-label fw-semibold">Change Profile Image</label>
+                        <input asp-for="ProfileImageFile" type="file" accept="image/*" class="form-control" />
+                        <span asp-validation-for="ProfileImageFile" class="text-danger small"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 fw-semibold py-2 rounded-3">
+                        Save Changes
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
