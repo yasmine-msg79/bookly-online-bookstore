@@ -1,0 +1,385 @@
+﻿
+@model Cart
+@using Microsoft.AspNetCore.Identity
+@using BookStore.Models
+@using BookStore.Data
+@using Microsoft.EntityFrameworkCore
+@inject UserManager<ApplicationUser> UserManager
+@inject ApplicationDbContext DbContext
+
+@{
+    ViewData["Title"] = "Checkout";
+    var user = Context.User.Identity?.IsAuthenticated == true 
+        ? await UserManager.GetUserAsync(Context.User) 
+        : null;
+
+    // ✅ Use List<dynamic> instead of List<object>
+    List<dynamic> userAddresses = new List<dynamic>();
+
+    if (user != null)
+    {
+        var addresses = await DbContext.Orders
+            .Where(o => o.UserId == user.Id)
+            .Select(o => new 
+            {
+                o.ShippingAddress,
+                o.ShippingCity,
+                o.ShippingState,
+                o.ShippingZipCode,
+                o.ShippingCountry
+            })
+            .Distinct()
+            .ToListAsync();
+
+        // ✅ Cast each anonymous object to 'dynamic'
+        userAddresses = addresses.Select(a => (dynamic)a).ToList();
+    }
+}
+
+
+<section class="padding-large">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- Order Summary -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">
+                            <i class="fas fa-shopping-bag me-2"></i>Order Summary
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        @if (Model?.CartItems?.Any() == true)
+                        {
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Product</th>
+                                            <th>Price</th>
+                                            <th>Quantity</th>
+                                            <th>Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.CartItems)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="~/images/category1.jpg" alt="@item.Book.Title"
+                                                             class="me-3 rounded" style="width: 60px; height: 80px; object-fit: cover;">
+                                                        <div>
+                                                            <h6 class="mb-1 fw-bold">@item.Book.Title</h6>
+                                                            <small class="text-muted">by @item.Book.Author</small>
+                                                            <br>
+                                                            <small class="text-muted">ISBN: @item.Book.ISBN</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="align-middle">
+                                                    <span class="fw-bold text-primary">$@item.Book.Price.ToString("F2")</span>
+                                                </td>
+                                                <td class="align-middle">
+                                                    <span class="badge bg-secondary">@item.Quantity</span>
+                                                </td>
+                                                <td class="align-middle">
+                                                    <span class="fw-bold">$@((item.Book.Price * item.Quantity).ToString("F2"))</span>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+                <!-- Shipping Information -->
+                <div class="card shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0">
+                            <i class="fas fa-shipping-fast me-2"></i>Shipping Information
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" action="@Url.Action("ProcessCheckout", "Cart")" id="checkout-form">
+                            @Html.AntiForgeryToken()
+                            <!-- User Information -->
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label fw-bold">First Name *</label>
+                                    <input type="text" class="form-control" name="firstName"
+                                           value="@(user?.FirstName)" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label fw-bold">Last Name *</label>
+                                    <input type="text" class="form-control" name="lastName"
+                                           value="@(user?.LastName)" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label fw-bold">Email *</label>
+                                    <input type="email" class="form-control" name="email"
+                                           value="@(user?.Email)" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label fw-bold">Phone *</label>
+                                    <input type="tel" class="form-control" name="phone"
+                                           value="@(user?.PhoneNumber)" required>
+                                </div>
+                            </div>
+
+                            <!-- Address Selection for Returning Users -->
+                            @if (user != null && userAddresses.Any())
+                            {
+                                <div class="mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="addressOption"
+                                               id="savedAddress" value="saved" checked>
+                                        <label class="form-check-label fw-bold" for="savedAddress">
+                                            Use Saved Address
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="addressOption"
+                                               id="newAddress" value="new">
+                                        <label class="form-check-label fw-bold" for="newAddress">
+                                            Use New Address
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div id="savedAddressSection" class="mb-4">
+                                    <label class="form-label fw-bold">Select Address</label>
+                                    <select class="form-select" name="savedAddressIndex" id="savedAddressSelect">
+                                        @for (int i = 0; i < userAddresses.Count; i++)
+                                        {
+                                            var address = userAddresses[i];
+                                            <option value="@i">
+                                                @address.ShippingAddress, @address.ShippingCity, @address.ShippingState @address.ShippingZipCode
+                                            </option>
+                                        }
+                                    </select>
+                                </div>
+                            }
+
+                            
+                            <!-- New Address Form -->
+                            <div id="newAddressSection" style="@(user != null && userAddresses.Any() ? "display: none;" : "")">
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Address *</label>
+                                    <input type="text" class="form-control" name="address"
+                                           placeholder="Street address, P.O. box, company name"
+                                           @(user != null && userAddresses.Any() ? "disabled" : "required")>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label fw-bold">City *</label>
+                                        <input type="text" class="form-control" name="city"
+                                               @(user != null && userAddresses.Any() ? "disabled" : "required")>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label class="form-label fw-bold">State *</label>
+                                        <input type="text" class="form-control" name="state"
+                                               @(user != null && userAddresses.Any() ? "disabled" : "required")>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label class="form-label fw-bold">ZIP Code *</label>
+                                        <input type="text" class="form-control" name="zipCode"
+                                               @(user != null && userAddresses.Any() ? "disabled" : "required")>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Country *</label>
+                                    <select class="form-select" name="country"
+                                            @(user != null && userAddresses.Any() ? "disabled" : "required")>
+                                        <option value="">Select Country</option>
+                                        <option value="US">United States</option>
+                                        <option value="CA">Canada</option>
+                                        <!-- ... more ... -->
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Save Address Option -->
+                            @if (user != null)
+                            {
+                                <div class="mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="saveAddress"
+                                               id="saveAddress" value="true">
+                                        <label class="form-check-label" for="saveAddress">
+                                            Save this address for future orders
+                                        </label>
+                                    </div>
+                                </div>
+                            }
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <!-- Order Total -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="mb-0">
+                            <i class="fas fa-calculator me-2"></i>Order Total
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        @if (Model?.CartItems?.Any() == true)
+                        {
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Subtotal:</span>
+                                <span class="fw-bold">$@Model.CartItems.Sum(ci => ci.Book.Price * ci.Quantity).ToString("F2")</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Shipping:</span>
+                                <span class="text-success fw-bold">Free</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Tax:</span>
+                                <span>$0.00</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between mb-3">
+                                <strong class="fs-5">Total:</strong>
+                                <strong class="fs-5 text-primary">$@Model.CartItems.Sum(ci => ci.Book.Price * ci.Quantity).ToString("F2")</strong>
+                            </div>
+
+                            <button type="submit" form="checkout-form" class="btn btn-success w-100 mb-2">
+                                <i class="fas fa-credit-card me-2"></i>Place Order
+                            </button>
+                            <a href="@Url.Action("Index", "Cart")" class="btn btn-outline-secondary w-100">
+                                <i class="fas fa-arrow-left me-2"></i>Back to Cart
+                            </a>
+                        }
+ 
+     
+
+                    </div>
+                </div>
+
+                <!-- Payment Information -->
+                <div class="card shadow-sm">
+                    <div class="card-header bg-warning text-dark">
+                        <h6 class="mb-0">
+                            <i class="fas fa-credit-card me-2"></i>Payment Information
+                        </h6>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted small">
+                            For demo purposes, this is a simplified checkout process.
+                            In a real application, you would integrate with a payment gateway like Stripe, PayPal, etc.
+                        </p>
+                        <div class="alert alert-info">
+                            <small>
+                                <strong>Demo Note:</strong> This checkout will process the order without actual payment processing.
+                                The cart will be cleared and stock will be updated.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            // Address selection logic
+                   $('input[name="addressOption"]').change(function() {
+            var selectedOption = $(this).val();
+
+            if (selectedOption === 'saved') {
+                $('#savedAddressSection').removeClass('d-none').show();
+                $('#newAddressSection').addClass('d-none').hide();
+                // Disable new address fields
+                $('#newAddressSection input, #newAddressSection select').prop('disabled', true).prop('required', false);
+                $('#savedAddressSection input, #savedAddressSection select').prop('disabled', false).prop('required', true);
+            } else {
+                $('#savedAddressSection').addClass('d-none').hide();
+                $('#newAddressSection').removeClass('d-none').show();
+                // Enable new address fields
+                $('#newAddressSection input, #newAddressSection select').prop('disabled', false).prop('required', true);
+                $('#savedAddressSection input, #savedAddressSection select').prop('disabled', true).prop('required', false);
+            }
+        });
+
+            // Form validation
+            $('#checkout-form').submit(function(e) {
+                var requiredFields = $(this).find('[required]');
+                var isValid = true;
+
+                requiredFields.each(function() {
+                    if (!$(this).val()) {
+                        isValid = false;
+                        $(this).addClass('is-invalid');
+                    } else {
+                        $(this).removeClass('is-invalid');
+                    }
+                });
+
+                if (!isValid) {
+                    e.preventDefault();
+                    alert('Please fill in all required fields.');
+                } else {
+                    // Show loading state
+                    $('button[type="submit"]').prop('disabled', true)
+                        .html('<i class="fas fa-spinner fa-spin me-2"></i>Processing...');
+                }
+            });
+
+            // Auto-fill new address form when saved address is selected
+            $('#savedAddressSelect').change(function() {
+                var selectedIndex = $(this).val();
+                // ✅ Fixed: Serialize works because userAddresses is List<object>
+                var addresses = @Html.Raw(Json.Serialize(userAddresses));
+
+                if (addresses && addresses[selectedIndex]) {
+                    var address = addresses[selectedIndex];
+                    $('input[name="address"]').val(address.ShippingAddress);
+                    $('input[name="city"]').val(address.ShippingCity);
+                    $('input[name="state"]').val(address.ShippingState);
+                    $('input[name="zipCode"]').val(address.ShippingZipCode);
+                    $('select[name="country"]').val(address.ShippingCountry);
+                }
+            });
+        });
+    </script>
+}
+
+<style>
+    .card {
+        border: none;
+        border-radius: 10px;
+    }
+
+    .card-header {
+        border-radius: 10px 10px 0 0 !important;
+    }
+
+    .form-control, .form-select {
+        border-radius: 8px;
+        border: 1px solid #dee2e6;
+    }
+
+        .form-control:focus, .form-select:focus {
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+        }
+
+    .btn {
+        border-radius: 8px;
+        font-weight: 500;
+    }
+
+    .table th {
+        border-top: none;
+        font-weight: 600;
+    }
+</style>

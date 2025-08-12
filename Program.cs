@@ -1,4 +1,5 @@
-using BookStore.Data;
+﻿using BookStore.Data;
+using BookStore.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -6,7 +7,7 @@ namespace BookStore
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -15,18 +16,19 @@ namespace BookStore
 
             // Add Connection String
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
-            new MySqlServerVersion(new Version(8, 0, 28))));
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
+            // ✅ Use ApplicationUser, not IdentityUser
+            builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
+            {
+                options.SignIn.RequireConfirmedAccount = false;
+            }).AddEntityFrameworkStores<ApplicationDbContext>();
 
             // Redirect to Login page if unauthorized
             builder.Services.ConfigureApplicationCookie(options =>
             {
-                options.LoginPath = "/Account/Login";  // redirect to login page if unauthorized
+                options.LoginPath = "/Identity/Account/Login";  // ✅ Make sure this is correct for your Identity area
             });
-
-            builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
 
@@ -34,7 +36,6 @@ namespace BookStore
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
@@ -43,11 +44,56 @@ namespace BookStore
 
             app.UseRouting();
 
+            app.UseAuthentication();   // ✅ must be before UseAuthorization
             app.UseAuthorization();
+
+            // Initialize database with super admin
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                try
+                {
+                    var context = services.GetRequiredService<ApplicationDbContext>();
+                    var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
+                    
+                    // Create super admin if it doesn't exist
+                    var superAdminEmail = "admin@bookstore.com";
+                    var superAdmin = await userManager.FindByEmailAsync(superAdminEmail);
+                    
+                    if (superAdmin == null)
+                    {
+                        superAdmin = new ApplicationUser
+                        {
+                            UserName = superAdminEmail,
+                            Email = superAdminEmail,
+                            EmailConfirmed = true,
+                            FirstName = "Super",
+                            LastName = "Admin",
+                            ProfileImageURL = "https://ui-avatars.com/api/?name=Super+Admin",
+                            Gender = Gender.Male,
+                            PhoneNumber = "0000000000"
+                        };
+                        
+                        var result = await userManager.CreateAsync(superAdmin, "Admin123!");
+                        if (result.Succeeded)
+                        {
+                            await userManager.AddToRoleAsync(superAdmin, "Admin");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    var logger = services.GetRequiredService<ILogger<Program>>();
+                    logger.LogError(ex, "An error occurred while creating super admin.");
+                }
+            }
 
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+
+            // Add Identity area routing
+            app.MapRazorPages();
 
             app.Run();
         }

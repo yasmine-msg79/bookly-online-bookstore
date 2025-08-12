@@ -1,0 +1,308 @@
+@model BookStore.Models.Cart
+@{
+    ViewData["Title"] = "Shopping Cart";
+}
+
+@Html.AntiForgeryToken()
+
+<section class="padding-large">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">
+                            <i class="fas fa-shopping-cart me-2"></i>Shopping Cart
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        @if (Model?.CartItems?.Any() == true)
+                        {
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Product</th>
+                                            <th>Price</th>
+                                            <th>Quantity</th>
+                                            <th>Total</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.CartItems)
+                                        {
+                                            <tr data-book-id="@item.BookId" class="cart-item-row">
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="~/images/category1.jpg" alt="@item.Book.Title" 
+                                                             class="me-3 rounded" style="width: 60px; height: 80px; object-fit: cover;">
+                                                        <div>
+                                                            <h6 class="mb-1 fw-bold">@item.Book.Title</h6>
+                                                            <small class="text-muted">by @item.Book.Author</small>
+                                                            <br>
+                                                            <small class="text-muted">ISBN: @item.Book.ISBN</small>
+                                                            <br>
+                                                            <small class="text-success">
+                                                                <i class="fas fa-check-circle me-1"></i>In Stock (@item.Book.StockQuantity available)
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="align-middle">
+                                                    <span class="fw-bold text-primary">$@item.Book.Price.ToString("F2")</span>
+                                                </td>
+                                                <td class="align-middle">
+                                                    <div class="quantity-controls d-flex align-items-center">
+                                                        <button class="btn btn-outline-secondary btn-sm quantity-btn" 
+                                                                data-action="decrease" data-book-id="@item.BookId" 
+                                                                @(item.Quantity <= 1 ? "disabled" : "")>
+                                                            <i class="fas fa-minus"></i>
+                                                        </button>
+                                                        <input type="number" class="form-control mx-2 quantity-input text-center"
+                                                               value="@item.Quantity" min="1" max="@item.Book.StockQuantity"
+                                                               data-book-id="@item.BookId" style="width: 60px;"
+                                                               data-max="@item.Book.StockQuantity">
+                                                        <button class="btn btn-outline-secondary btn-sm quantity-btn" 
+                                                                data-action="increase" data-book-id="@item.BookId"
+                                                                @(item.Quantity >= item.Book.StockQuantity ? "disabled" : "")>
+                                                            <i class="fas fa-plus"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="align-middle">
+                                                    <span class="fw-bold item-total">$@((item.Book.Price * item.Quantity).ToString("F2"))</span>
+                                                </td>
+                                                <td class="align-middle">
+                                                    <button class="btn btn-outline-danger btn-sm remove-item-btn" data-book-id="@item.BookId">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="text-center py-5">
+                                <i class="fas fa-shopping-cart fa-3x text-muted mb-3"></i>
+                                <h5 class="text-muted">Your cart is empty</h5>
+                                <p class="text-muted">Add some books to get started!</p>
+                                <a href="@Url.Action("Index", "Books")" class="btn btn-primary">
+                                    <i class="fas fa-book me-2"></i>Continue Shopping
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0">
+                            <i class="fas fa-calculator me-2"></i>Order Summary
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        @if (Model?.CartItems?.Any() == true)
+                        {
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Subtotal:</span>
+                                <span class="cart-subtotal fw-bold">$@Model.CartItems.Sum(ci => ci.Book.Price * ci.Quantity).ToString("F2")</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Shipping:</span>
+                                <span class="text-success fw-bold">Free</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between mb-3">
+                                <strong class="fs-5">Total:</strong>
+                                <strong class="cart-total fs-5 text-primary">$@Model.CartItems.Sum(ci => ci.Book.Price * ci.Quantity).ToString("F2")</strong>
+                            </div>
+                            
+                            <a href="@Url.Action("Checkout", "Cart")" class="btn btn-success w-100 mb-2">
+                                <i class="fas fa-credit-card me-2"></i>Proceed to Checkout
+                            </a>
+                            <a href="@Url.Action("Index", "Books")" class="btn btn-outline-primary w-100">
+                                <i class="fas fa-arrow-left me-2"></i>Continue Shopping
+                            </a>
+                        }
+                        else
+                        {
+                            <p class="text-muted text-center">No items in cart</p>
+                        }
+                    </div>
+                </div>
+
+                @if (TempData["StockErrors"] is List<string> stockErrors && stockErrors.Any())
+                {
+                    <div class="alert alert-danger mt-3 shadow-sm">
+                        <h6 class="mb-3">
+                            <i class="fas fa-exclamation-triangle text-warning me-2"></i>
+                            <strong>Stock Issues</strong>
+                        </h6>
+                        <ul class="mb-0">
+                            @foreach (var error in stockErrors)
+                            {
+                                <li>@Html.Raw(error)</li>
+                            }
+                        </ul>
+                        <small class="text-muted mt-2 d-block">
+                            Please adjust quantities or remove items to continue.
+                        </small>
+                    </div>
+                }
+
+                @if (TempData["Error"] != null)
+                {
+                    <div class="alert alert-danger mt-3">
+                        <i class="fas fa-exclamation-circle me-2"></i>@TempData["Error"]
+                    </div>
+                }
+               
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            // Get anti-forgery token
+            function getAntiForgeryToken() {
+                return $('input[name="__RequestVerificationToken"]').val();
+            }
+
+            // Quantity buttons
+            $('.quantity-btn').on('click', function () {
+                var button = $(this);
+                var bookId = button.data('book-id');
+                var action = button.data('action');
+                var input = $(`.quantity-input[data-book-id="${bookId}"]`);
+                var currentQty = parseInt(input.val());
+                var newQty = action === 'increase' ? currentQty + 1 : currentQty - 1;
+
+                updateQuantity(bookId, newQty);
+            });
+
+            // Manual input change
+            $('.quantity-input').on('change', function () {
+                var input = $(this);
+                var bookId = input.data('book-id');
+                var quantity = parseInt(input.val());
+
+                if (quantity > 0) {
+                    updateQuantity(bookId, quantity);
+                }
+            });
+
+            // Remove item
+            $('.remove-item-btn').on('click', function () {
+                var button = $(this);
+                var bookId = button.data('book-id');
+                var row = button.closest('tr');
+
+                $.ajax({
+                    url: '@Url.Action("RemoveFromCart", "Cart")',
+                    type: 'POST',
+                    headers: {
+                        'RequestVerificationToken': getAntiForgeryToken()
+                    },
+                    data: {
+                        bookId: bookId,
+                        __RequestVerificationToken: getAntiForgeryToken()
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            row.fadeOut(300, function () {
+                                row.remove();
+                                updateCartTotals(response.itemCount || 0,onse.cartTotal || '$0.00');
+                                if ($('.cart-item-row').length === 0) {
+                                    location.reload(); // Show empty state
+                                }
+                            });
+                        } else {
+                            alert('Error: ' + response.message);
+                        }
+                    },
+                    error: function () {
+                        alert('An error occurred while removing the item.');
+                    }
+                });
+            });
+
+            function updateQuantity(bookId, quantity) {
+                $.ajax({
+                    url: '@Url.Action("UpdateQuantity", "Cart")',
+                    type: 'POST',
+                    headers: {
+                        'RequestVerificationToken': getAntiForgeryToken()
+                    },
+                    data: {
+                        bookId: bookId,
+                        quantity: quantity,
+                        __RequestVerificationToken: getAntiForgeryToken()
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            // Update UI
+                            var row = $(`tr[data-book-id="${bookId}"]`);
+                            row.find('.quantity-input').val(response.quantity);
+                            row.find('.item-total').text('$' + response.itemTotal.toFixed(2));
+                            updateCartTotals(response.itemCount, response.cartTotal);
+
+                            // Update buttons
+                            var decreaseBtn = row.find('.quantity-btn[data-action="decrease"]');
+                            var increaseBtn = row.find('.quantity-btn[data-action="increase"]');
+                            decreaseBtn.prop('disabled', response.quantity <= 1);
+                            increaseBtn.prop('disabled', response.quantity >= row.find('.quantity-input').data('max'));
+                        } else {
+                            alert('Update failed: ' + response.message);
+                        }
+                    },
+                    error: function () {
+                        alert('An error occurred while updating quantity.');
+                    }
+                });
+            }
+
+            function updateCartTotals(itemCount, cartTotal) {
+                $('.cart-subtotal').text(cartTotal);
+                $('.cart-total').text(cartTotal);
+                // Update cart badge
+                $('.cart-count').text(itemCount || 0);
+            }
+        });
+    </script>
+}
+
+<style>
+    .quantity-controls {
+        max-width: 150px;
+    }
+    
+    .quantity-input {
+        border-radius: 0;
+    }
+    
+    .quantity-btn {
+        border-radius: 0;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .cart-item-row:hover {
+        background-color: #f8f9fa;
+    }
+    
+    .table th {
+        border-top: none;
+        font-weight: 600;
+    }
+</style>

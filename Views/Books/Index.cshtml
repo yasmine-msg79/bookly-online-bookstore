@@ -1,0 +1,310 @@
+﻿@model List<BookStore.Models.Book>
+@{
+    ViewData["Title"] = "Books";
+}
+
+@Html.AntiForgeryToken()
+
+<section class="padding-large">
+    <div class="container">
+        <!-- Success Message -->
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <i class="fas fa-check-circle me-2"></i>@TempData["Success"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        }
+        
+        <div class="row">
+            <!-- Filters Sidebar -->
+            <div class="col-lg-3 col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="fas fa-filter me-2"></i>Filters</h5>
+                    </div>
+                    <div class="card-body">
+                        <form method="get" action="@Url.Action("Index", "Books")" id="filterForm">
+                            <!-- Search -->
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Search</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+                                    <input type="text" name="searchTerm" class="form-control" value="@ViewBag.CurrentSearch" placeholder="Search books...">
+                                </div>
+                            </div>
+
+                                                        <!-- Category Filter -->
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Category</label>
+                                <select name="categoryId" class="form-select">
+                                    <option value="">All Categories</option>
+                                    @if (ViewBag.Categories != null)
+                                    {
+                                        var categories = ViewBag.Categories as IEnumerable<BookStore.Models.Category>;
+                                        var selectedCategory = ViewBag.CurrentCategory as int?;
+                                        foreach (var category in categories)
+                                        {
+                                            if (selectedCategory.HasValue && selectedCategory.Value == category.Id)
+                                            {
+                                                <option value="@category.Id" selected>@category.Name</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@category.Id">@category.Name</option>
+                                            }
+                                        }
+                                    }
+                                </select>
+                            </div>
+
+                            <!-- Price Range -->
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Price Range</label>
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <input type="number" name="minPrice" class="form-control" value="@ViewBag.CurrentMinPrice" placeholder="Min" step="0.01" min="0">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="number" name="maxPrice" class="form-control" value="@ViewBag.CurrentMaxPrice" placeholder="Max" step="0.01" min="0">
+                                    </div>
+                                </div>
+                            </div>
+
+                                                        <!-- Sort -->
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Sort By</label>
+                                <select name="sortBy" class="form-select">
+                                    @if (ViewBag.CurrentSort == "title_asc")
+                                    {
+                                        <option value="title_asc" selected>Title A-Z</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="title_asc">Title A-Z</option>
+                                    }
+                                    
+                                    @if (ViewBag.CurrentSort == "title_desc")
+                                    {
+                                        <option value="title_desc" selected>Title Z-A</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="title_desc">Title Z-A</option>
+                                    }
+                                    
+                                    @if (ViewBag.CurrentSort == "price_asc")
+                                    {
+                                        <option value="price_asc" selected>Price Low to High</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="price_asc">Price Low to High</option>
+                                    }
+                                    
+                                    @if (ViewBag.CurrentSort == "price_desc")
+                                    {
+                                        <option value="price_desc" selected>Price High to Low</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="price_desc">Price High to Low</option>
+                                    }
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100">
+                                <i class="fas fa-search me-2"></i>Apply Filters
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Books Grid -->
+            <div class="col-lg-9 col-md-8">
+                <!-- Results Header -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                        <h4 class="mb-1">Books</h4>
+                        <p class="text-muted mb-0">@ViewBag.TotalCount results found</p>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <a href="@Url.Action("Index", "Cart")" class="btn btn-outline-primary">
+                            <i class="fas fa-shopping-cart me-2"></i>Cart
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Success Message -->
+                @if (TempData["Success"] != null)
+                {
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <i class="fas fa-check-circle me-2"></i>@TempData["Success"]
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                }
+
+                <!-- Books Grid -->
+                @if (Model != null && Model.Any())
+                {
+                    <div class="row">
+                        @foreach (var book in Model)
+                        {
+                            <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+                                <div class="card h-100 product-item shadow-sm hover-shadow">
+                                    <div class="image-holder position-relative">
+                                        <img src="~/images/category1.jpg" class="img-fluid" alt="@book.Title">
+                                        <div class="position-absolute top-0 end-0 m-2">
+                                            @if (book.StockQuantity <= 0)
+                                            {
+                                                <span class="badge bg-danger">Out of Stock</span>
+                                            }
+                                            else if (book.StockQuantity <= 5)
+                                            {
+                                                <span class="badge bg-warning">Low Stock</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge bg-success">In Stock</span>
+                                            }
+                                        </div>
+                                    </div>
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">
+                                            <a href="@Url.Action("Details", "Books", new { id = book.Id })" class="text-decoration-none text-dark">@book.Title</a>
+                                        </h5>
+                                        <p class="card-text text-muted mb-2">by @book.Author</p>
+                                        <p class="card-text small text-muted">@(book.Description?.Length > 100 ? book.Description.Substring(0, 100) + "..." : book.Description)</p>
+                                        
+                                        <div class="mt-auto">
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <span class="h5 text-primary mb-0 fw-bold">$@book.Price.ToString("F2")</span>
+                                                <small class="text-muted">@book.StockQuantity available</small>
+                                            </div>
+                                            
+                                            <form method="post" action="@Url.Action("AddToCart", "Cart")" style="display: inline;">
+                                                @Html.AntiForgeryToken()
+                                                <input type="hidden" name="bookId" value="@book.Id" />
+                                                <input type="hidden" name="quantity" value="1" />
+                                                <button type="submit" class="btn btn-primary w-100" 
+                                                        @(book.StockQuantity <= 0 ? "disabled" : "")>
+                                                    @if (book.StockQuantity <= 0)
+                                                    {
+                                                        <i class="fas fa-times me-2">Out of Stock</i>
+                                                    }
+                                                    else
+                                                    {
+                                                        <i class="fas fa-cart-plus me-2">Add to Cart</i>
+                                                    }
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                    <!-- Pagination -->
+                    @if (ViewBag.TotalPages > 1)
+                    {
+                        <nav aria-label="Books pagination" class="mt-4">
+                            <ul class="pagination justify-content-center">
+                                @if (ViewBag.HasPreviousPage)
+                                {
+                                    <li class="page-item">
+                                        <a class="page-link" href="@Url.Action("Index", "Books", new { 
+                                            page = ViewBag.PageNumber - 1, 
+                                            sortBy = ViewBag.CurrentSort, 
+                                            searchTerm = ViewBag.CurrentSearch, 
+                                            categoryId = ViewBag.CurrentCategory, 
+                                            minPrice = ViewBag.CurrentMinPrice, 
+                                            maxPrice = ViewBag.CurrentMaxPrice 
+                                        })">
+                                            <i class="fas fa-chevron-left"></i> Previous
+                                        </a>
+                                    </li>
+                                }
+
+                                @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                                {
+                                    <li class="page-item @(i == ViewBag.PageNumber ? "active" : "")">
+                                        <a class="page-link" href="@Url.Action("Index", "Books", new { 
+                                            page = i, 
+                                            sortBy = ViewBag.CurrentSort, 
+                                            searchTerm = ViewBag.CurrentSearch, 
+                                            categoryId = ViewBag.CurrentCategory, 
+                                            minPrice = ViewBag.CurrentMinPrice, 
+                                            maxPrice = ViewBag.CurrentMaxPrice 
+                                        })">@i</a>
+                                    </li>
+                                }
+
+                                @if (ViewBag.HasNextPage)
+                                {
+                                    <li class="page-item">
+                                        <a class="page-link" href="@Url.Action("Index", "Books", new { 
+                                            page = ViewBag.PageNumber + 1, 
+                                            sortBy = ViewBag.CurrentSort, 
+                                            searchTerm = ViewBag.CurrentSearch, 
+                                            categoryId = ViewBag.CurrentCategory, 
+                                            minPrice = ViewBag.CurrentMinPrice, 
+                                            maxPrice = ViewBag.CurrentMaxPrice 
+                                        })">
+                                            Next <i class="fas fa-chevron-right"></i>
+                                        </a>
+                                    </li>
+                                }
+                            </ul>
+                        </nav>
+                    }
+                }
+                else
+                {
+                    <div class="text-center py-5">
+                        <i class="fas fa-book fa-3x text-muted mb-3"></i>
+                        <h5 class="text-muted">No books found</h5>
+                        <p class="text-muted">Try adjusting your search criteria or filters.</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            // Auto-submit form when filters change
+            $('select[name="categoryId"], select[name="sortBy"]').change(function() {
+                $('#filterForm').submit();
+            });
+            
+            // Add hover effect to cards
+            $('.product-item').hover(
+                function() {
+                    $(this).addClass('shadow');
+                },
+                function() {
+                    $(this).removeClass('shadow');
+                }
+            );
+        });
+    </script>
+}
+
+<style>
+    .hover-shadow:hover {
+        transform: translateY(-2px);
+        transition: transform 0.2s ease-in-out;
+    }
+    
+    .product-item {
+        transition: all 0.3s ease;
+    }
+    
+    .product-item:hover {
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+    }
+</style> 

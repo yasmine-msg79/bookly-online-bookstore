@@ -2,4 +2,133 @@
     ViewData["Title"] = "Home Page";
 }
 
-<a>aaaaaaaaaaaaaaaaaa</a>
+<!-- Featured Books Section -->
+<section class="padding-large">
+    <div class="container">
+        <div class="section-title text-center mb-5">
+            <h2>Featured Books</h2>
+            <p>Discover our collection of amazing books</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                <div class="card h-100 product-item">
+                    <div class="image-holder">
+                        <img src="~/images/category1.jpg" class="img-fluid" alt="Book 1">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">The Great Adventure</h5>
+                        <p class="card-text text-muted">by John Smith</p>
+                        <p class="card-text small">An epic journey through unknown lands...</p>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="h5 text-primary mb-0">$24.99</span>
+                                <span class="badge bg-success">In Stock</span>
+                            </div>
+                            <a href="@Url.Action("Index", "Books")" class="btn btn-primary w-100">View All Books</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                <div class="card h-100 product-item">
+                    <div class="image-holder">
+                        <img src="~/images/category2.jpg" class="img-fluid" alt="Book 2">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Mystery Manor</h5>
+                        <p class="card-text text-muted">by Jane Doe</p>
+                        <p class="card-text small">A thrilling mystery that will keep you guessing...</p>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="h5 text-primary mb-0">$19.99</span>
+                                <span class="badge bg-success">In Stock</span>
+                            </div>
+                            <a href="@Url.Action("Index", "Books")" class="btn btn-primary w-100">View All Books</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                <div class="card h-100 product-item">
+                    <div class="image-holder">
+                        <img src="~/images/category3.jpg" class="img-fluid" alt="Book 3">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Science Today</h5>
+                        <p class="card-text text-muted">by Dr. Wilson</p>
+                        <p class="card-text small">Exploring the latest discoveries in science...</p>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="h5 text-primary mb-0">$29.99</span>
+                                <span class="badge bg-success">In Stock</span>
+                            </div>
+                            <a href="@Url.Action("Index", "Books")" class="btn btn-primary w-100">View All Books</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                <div class="card h-100 product-item">
+                    <div class="image-holder">
+                        <img src="~/images/category4.jpg" class="img-fluid" alt="Book 4">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Cooking Masterclass</h5>
+                        <p class="card-text text-muted">by Chef Maria</p>
+                        <p class="card-text small">Learn to cook like a professional chef...</p>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="h5 text-primary mb-0">$34.99</span>
+                                <span class="badge bg-success">In Stock</span>
+                            </div>
+                            <a href="@Url.Action("Index", "Books")" class="btn btn-primary w-100">View All Books</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <a href="@Url.Action("Index", "Books")" class="btn btn-outline-primary btn-lg">Browse All Books</a>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="padding-large bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="text-center">
+                    <svg class="quality mb-3" width="48" height="48">
+                        <use xlink:href="#quality"></use>
+                    </svg>
+                    <h5>Quality Books</h5>
+                    <p class="text-muted">We offer only the highest quality books from renowned publishers and authors.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="text-center">
+                    <svg class="price-tag mb-3" width="48" height="48">
+                        <use xlink:href="#price-tag"></use>
+                    </svg>
+                    <h5>Best Prices</h5>
+                    <p class="text-muted">Competitive prices and regular discounts to make reading accessible to everyone.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="text-center">
+                    <svg class="shield-plus mb-3" width="48" height="48">
+                        <use xlink:href="#shield-plus"></use>
+                    </svg>
+                    <h5>Secure Shopping</h5>
+                    <p class="text-muted">Safe and secure checkout process to protect your personal information.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
