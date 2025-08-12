@@ -91,8 +91,12 @@ namespace BookStore.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("ProfileImageURL")
+<<<<<<< HEAD
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+=======
+                        .HasColumnType("longtext");
+>>>>>>> origin/main
 
                     b.Property<int>("Role")
                         .HasColumnType("int");
@@ -108,6 +112,9 @@ namespace BookStore.Migrations
                         .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
 
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
@@ -141,6 +148,10 @@ namespace BookStore.Migrations
                         .HasMaxLength(15)
                         .HasColumnType("nvarchar(15)");
 
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
@@ -157,6 +168,63 @@ namespace BookStore.Migrations
                         .IsUnique();
 
                     b.ToTable("Books");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 2,
+                            Author = "F. Scott Fitzgerald",
+                            Description = "A classic novel of the Jazz Age.",
+                            ISBN = "1234567890123",
+                            ImageUrl = "/images/The-Great-Gatsby.jpg",
+                            Price = 19.99m,
+                            StockQuantity = 10,
+                            Title = "The Great Gatsby"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Author = "George Orwell",
+                            Description = "A dystopian novel about totalitarianism.",
+                            ISBN = "2345678901234",
+                            ImageUrl = "/images/1984.jpg",
+                            Price = 15.99m,
+                            StockQuantity = 7,
+                            Title = "1984"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Author = "Harper Lee",
+                            Description = "A novel about racial injustice in the Deep South.",
+                            ISBN = "3456789012345",
+                            ImageUrl = "/images/To-Kill-a-Mockingbird.jpg",
+                            Price = 18.50m,
+                            StockQuantity = 12,
+                            Title = "To Kill a Mockingbird"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Author = "Jane Austen",
+                            Description = "A romantic novel about manners and marriage.",
+                            ISBN = "4567890123456",
+                            ImageUrl = "/images/Pride-and-Prejudice.jpeg",
+                            Price = 14.99m,
+                            StockQuantity = 15,
+                            Title = "Pride and Prejudice"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Author = "J.D. Salinger",
+                            Description = "A story about teenage rebellion and angst.",
+                            ISBN = "5678901234567",
+                            ImageUrl = "/images/The-Catcher-in-the-Rye.jpeg",
+                            Price = 16.99m,
+                            StockQuantity = 9,
+                            Title = "The Catcher in the Rye"
+                        });
                 });
 
             modelBuilder.Entity("BookStore.Models.BookReview", b =>
@@ -430,12 +498,19 @@ namespace BookStore.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
+<<<<<<< HEAD
                         .HasMaxLength(128)
                         .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("ProviderKey")
                         .HasMaxLength(128)
                         .HasColumnType("nvarchar(128)");
+=======
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("ProviderKey")
+                        .HasColumnType("varchar(255)");
+>>>>>>> origin/main
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
@@ -472,12 +547,19 @@ namespace BookStore.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
+<<<<<<< HEAD
                         .HasMaxLength(128)
                         .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("Name")
                         .HasMaxLength(128)
                         .HasColumnType("nvarchar(128)");
+=======
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("varchar(255)");
+>>>>>>> origin/main
 
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");

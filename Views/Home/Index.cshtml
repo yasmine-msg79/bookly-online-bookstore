@@ -1,7 +1,9 @@
-﻿@{
+﻿@model List<BookStore.Models.Book>
+@{
     ViewData["Title"] = "Home Page";
 }
 
+<<<<<<< HEAD
 <!-- Featured Books Section -->
 <section class="padding-large">
     <div class="container">
@@ -26,10 +28,47 @@
                                 <span class="badge bg-success">In Stock</span>
                             </div>
                             <a href="@Url.Action("Index", "Books")" class="btn btn-primary w-100">View All Books</a>
+=======
+<section id="billboard" class="position-relative d-flex align-items-center py-5 bg-light-gray"
+         style="background-image: url('/images/banner-image-bg.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 800px;">
+
+    <!-- Slider navigation arrows -->
+    <div class="position-absolute end-0 pe-0 pe-xxl-5 me-0 me-xxl-5 swiper-next main-slider-button-next">
+        <svg class="chevron-forward-circle d-flex justify-content-center align-items-center p-2" width="80" height="80">
+            <use xlink:href="#alt-arrow-right-outline"></use>
+        </svg>
+    </div>
+    <div class="position-absolute start-0 ps-0 ps-xxl-5 ms-0 ms-xxl-5 swiper-prev main-slider-button-prev">
+        <svg class="chevron-back-circle d-flex justify-content-center align-items-center p-2" width="80" height="80">
+            <use xlink:href="#alt-arrow-left-outline"></use>
+        </svg>
+    </div>
+
+    <!-- Swiper container -->
+    <div class="swiper main-swiper">
+        <div class="swiper-wrapper d-flex align-items-center">
+
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <div class="container">
+                    <div class="row d-flex flex-column-reverse flex-md-row align-items-center">
+                        <div class="col-md-5 offset-md-1 mt-5 mt-md-0 text-center text-md-start">
+                            <div class="banner-content">
+                                <h2>The Fine Print Book Collection</h2>
+                                <p>Best Offer Save 30%. Grab it now!</p>
+                                <a href="~/Home/Shop" class="btn mt-3">Shop Collection</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <div class="image-holder">
+                                <img src="~/images/banner-image2.png" class="img-fluid" alt="banner">
+                            </div>
+>>>>>>> origin/main
                         </div>
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
             
             <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
                 <div class="card h-100 product-item">
@@ -46,10 +85,29 @@
                                 <span class="badge bg-success">In Stock</span>
                             </div>
                             <a href="@Url.Action("Index", "Books")" class="btn btn-primary w-100">View All Books</a>
+=======
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+                <div class="container">
+                    <div class="row d-flex flex-column-reverse flex-md-row align-items-center">
+                        <div class="col-md-5 offset-md-1 mt-5 mt-md-0 text-center text-md-start">
+                            <div class="banner-content">
+                                <h2>How Innovation Works</h2>
+                                <p>Discount available. Grab it now!</p>
+                                <a href="~/Home/Shop" class="btn mt-3">Shop Product</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <div class="image-holder">
+                                <img src="~/images/banner-image1.png" class="img-fluid" alt="banner">
+                            </div>
+>>>>>>> origin/main
                         </div>
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
             
             <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
                 <div class="card h-100 product-item">
@@ -66,10 +124,29 @@
                                 <span class="badge bg-success">In Stock</span>
                             </div>
                             <a href="@Url.Action("Index", "Books")" class="btn btn-primary w-100">View All Books</a>
+=======
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+                <div class="container">
+                    <div class="row d-flex flex-column-reverse flex-md-row align-items-center">
+                        <div class="col-md-5 offset-md-1 mt-5 mt-md-0 text-center text-md-start">
+                            <div class="banner-content">
+                                <h2>Your Heart is the Sea</h2>
+                                <p>Limited stocks available. Grab it now!</p>
+                                <a href="~/Home/Shop" class="btn mt-3">Shop Collection</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <div class="image-holder">
+                                <img src="~/images/banner-image.png" class="img-fluid" alt="banner">
+                            </div>
+>>>>>>> origin/main
                         </div>
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
             
             <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
                 <div class="card h-100 product-item">
@@ -132,3 +209,38 @@
         </div>
     </div>
 </section>
+=======
+
+        </div>
+    </div>
+</section>
+<section class="best-selling-books my-5 container">
+    <h2 class="mb-4 text-center fw-bold">Best Selling Books</h2>
+    <div class="row gx-4 gy-4 justify-content-center">
+        @foreach (var book in Model)
+        {
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <a href="@Url.Action("Details", "Books", new { id = book.Id })" class="text-decoration-none text-reset">
+                    <div class="card h-100 border rounded-3 shadow-sm position-relative">
+                        @if (book.Price <= 15)
+                        {
+                            <span class="badge bg-danger position-absolute top-0 start-0 m-2" style="z-index: 10; font-size: 0.8rem;">10% off</span>
+                        }
+
+                        <img src="@book.ImageUrl" alt="@book.Title" class="card-img-top rounded-3" style="height: 220px; object-fit: contain; padding: 10px;" />
+
+                        <div class="card-body px-2 pt-2 pb-3 d-flex flex-column">
+                            <h6 class="card-title fw-semibold mb-1">@book.Title</h6>
+                            <p class="text-danger small mb-1" style="font-weight: 300;">@book.Author</p>
+
+                            <p class="text-danger fw-bold fs-5 mb-0">$@book.Price.ToString("0")</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</section>
+
+
+>>>>>>> origin/main

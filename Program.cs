@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿using BookStore.Data;
+=======
+using BookStore.Data;
+>>>>>>> origin/main
 using BookStore.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -14,8 +18,9 @@ namespace BookStore
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-            // Add Connection String
+            // Add Connection String and configure EF Core with MySQL
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
+<<<<<<< HEAD
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             // ✅ Use ApplicationUser, not IdentityUser
@@ -23,16 +28,48 @@ namespace BookStore
             {
                 options.SignIn.RequireConfirmedAccount = false;
             }).AddEntityFrameworkStores<ApplicationDbContext>();
+=======
+                options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
+                new MySqlServerVersion(new Version(8, 0, 28))));
 
-            // Redirect to Login page if unauthorized
+            // Configure Identity with Roles support
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+            {
+                options.SignIn.RequireConfirmedAccount = true;
+            })
+            .AddEntityFrameworkStores<ApplicationDbContext>()
+            .AddDefaultTokenProviders();
+>>>>>>> origin/main
+
+            // Configure cookie settings (redirect to login if unauthorized)
             builder.Services.ConfigureApplicationCookie(options =>
             {
+<<<<<<< HEAD
                 options.LoginPath = "/Identity/Account/Login";  // ✅ Make sure this is correct for your Identity area
             });
 
+=======
+                options.LoginPath = "/Account/Login";
+            });
+
+            // Add Razor Pages
+            builder.Services.AddRazorPages();
+
+            // Register UserSeeder service for DI
+            builder.Services.AddScoped<UserSeeder>();
+
+            // Build the app
+>>>>>>> origin/main
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+            // Seed the super admin user on startup
+            using (var scope = app.Services.CreateScope())
+            {
+                var userSeeder = scope.ServiceProvider.GetRequiredService<UserSeeder>();
+                await userSeeder.CreateSuperAdminAsync();
+            }
+
+            // Configure HTTP request pipeline
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
@@ -44,6 +81,7 @@ namespace BookStore
 
             app.UseRouting();
 
+<<<<<<< HEAD
             app.UseAuthentication();   // ✅ must be before UseAuthorization
             app.UseAuthorization();
 
@@ -88,6 +126,12 @@ namespace BookStore
                 }
             }
 
+=======
+            app.UseAuthentication();
+            app.UseAuthorization();
+
+            app.MapRazorPages();
+>>>>>>> origin/main
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
