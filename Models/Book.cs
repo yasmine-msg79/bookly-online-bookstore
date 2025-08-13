@@ -17,7 +17,7 @@ namespace BookStore.Models
         public string ImageUrl { get; set; }
         public int StockQuantity { get; set; }
 
-        public virtual ICollection<BookReview> Reviews { get; set; }    
+        public virtual ICollection<BookReview> Reviews { get; set; }
         public virtual ICollection<Category> Categories { get; set; }
         public virtual ICollection<OrderItem> OrderItems { get; set; }
         public virtual ICollection<StockLog> StockLogs { get; set; }

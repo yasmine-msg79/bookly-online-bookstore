@@ -1,9 +1,8 @@
 @model BookStore.Models.Cart
+@using System.Linq
 @{
     ViewData["Title"] = "Shopping Cart";
 }
-
-@Html.AntiForgeryToken()
 
 <section class="padding-large">
     <div class="container">
@@ -19,62 +18,54 @@
                         @if (Model?.CartItems?.Any() == true)
                         {
                             <div class="table-responsive">
-                                <table class="table table-hover">
-                                    <thead class="table-light">
+                                <table class="table table-hover cart-table">
+                                    <thead>
                                         <tr>
-                                            <th>Product</th>
-                                            <th>Price</th>
-                                            <th>Quantity</th>
-                                            <th>Total</th>
-                                            <th>Action</th>
+                                            <th style="width: 45%;">Product</th>
+                                            <th style="width: 15%;">Price</th>
+                                            <th style="width: 20%;">Quantity</th>
+                                            <th style="width: 10%;">Total</th>
+                                            <th style="width: 10%;">Remove</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach (var item in Model.CartItems)
                                         {
                                             <tr data-book-id="@item.BookId" class="cart-item-row">
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <img src="~/images/category1.jpg" alt="@item.Book.Title" 
-                                                             class="me-3 rounded" style="width: 60px; height: 80px; object-fit: cover;">
-                                                        <div>
-                                                            <h6 class="mb-1 fw-bold">@item.Book.Title</h6>
-                                                            <small class="text-muted">by @item.Book.Author</small>
-                                                            <br>
-                                                            <small class="text-muted">ISBN: @item.Book.ISBN</small>
-                                                            <br>
-                                                            <small class="text-success">
-                                                                <i class="fas fa-check-circle me-1"></i>In Stock (@item.Book.StockQuantity available)
-                                                            </small>
+                                                <td class="product-cell">
+                                                    <div class="product-info">
+                                                        <img src="~/images/category1.jpg" alt="@item.Book.Title" class="product-image">
+                                                        <div class="product-details">
+                                                            <h6 class="product-title">@item.Book.Title</h6>
+                                                            <div class="product-meta">
+                                                                <small class="text-muted">by @item.Book.Author</small><br>
+                                                                <small class="text-muted">ISBN: @item.Book.ISBN</small><br>
+                                                                <small class="text-success">
+                                                                    <i class="fas fa-check-circle"></i> In Stock (@item.Book.StockQuantity available)
+                                                                </small>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td class="align-middle">
-                                                    <span class="fw-bold text-primary">$@item.Book.Price.ToString("F2")</span>
+                                                <td class="price-cell">
+                                                    <span class="item-price" data-price="@item.Book.Price">$@item.Book.Price.ToString("F2")</span>
                                                 </td>
-                                                <td class="align-middle">
-                                                    <div class="quantity-controls d-flex align-items-center">
-                                                        <button class="btn btn-outline-secondary btn-sm quantity-btn" 
-                                                                data-action="decrease" data-book-id="@item.BookId" 
-                                                                @(item.Quantity <= 1 ? "disabled" : "")>
+                                                <td class="quantity-cell">
+                                                    <div class="quantity-controls">
+                                                        <button class="quantity-btn minus" onclick="changeQuantity(@item.BookId, -1, @item.Book.StockQuantity)" type="button">
                                                             <i class="fas fa-minus"></i>
                                                         </button>
-                                                        <input type="number" class="form-control mx-2 quantity-input text-center"
-                                                               value="@item.Quantity" min="1" max="@item.Book.StockQuantity"
-                                                               data-book-id="@item.BookId" style="width: 60px;"
-                                                               data-max="@item.Book.StockQuantity">
-                                                        <button class="btn btn-outline-secondary btn-sm quantity-btn" 
-                                                                data-action="increase" data-book-id="@item.BookId"
-                                                                @(item.Quantity >= item.Book.StockQuantity ? "disabled" : "")>
+                                                        <input type="number" class="quantity-input" value="@item.Quantity" min="1" max="@item.Book.StockQuantity" id="qty-@item.BookId" onchange="updateQuantityFromInput(@item.BookId, @item.Book.StockQuantity)">
+                                                        <button class="quantity-btn plus" onclick="changeQuantity(@item.BookId, 1, @item.Book.StockQuantity)" type="button">
                                                             <i class="fas fa-plus"></i>
                                                         </button>
                                                     </div>
                                                 </td>
-                                                <td class="align-middle">
-                                                    <span class="fw-bold item-total">$@((item.Book.Price * item.Quantity).ToString("F2"))</span>
+                                                <td class="total-cell">
+                                                    <span class="item-total" id="total-@item.BookId">$@((item.Book.Price * item.Quantity).ToString("F2"))</span>
                                                 </td>
-                                                <td class="align-middle">
-                                                    <button class="btn btn-outline-danger btn-sm remove-item-btn" data-book-id="@item.BookId">
+                                                <td class="action-cell">
+                                                    <button class="btn btn-outline-danger btn-sm remove-btn" onclick="removeItem(@item.BookId)" type="button">
                                                         <i class="fas fa-trash"></i>
                                                     </button>
                                                 </td>
@@ -111,7 +102,7 @@
                         {
                             <div class="d-flex justify-content-between mb-2">
                                 <span>Subtotal:</span>
-                                <span class="cart-subtotal fw-bold">$@Model.CartItems.Sum(ci => ci.Book.Price * ci.Quantity).ToString("F2")</span>
+                                <span class="cart-subtotal fw-bold" id="cart-subtotal">$@Model.CartItems.Sum(ci => ci.Book.Price * ci.Quantity).ToString("F2")</span>
                             </div>
                             <div class="d-flex justify-content-between mb-2">
                                 <span>Shipping:</span>
@@ -120,9 +111,9 @@
                             <hr>
                             <div class="d-flex justify-content-between mb-3">
                                 <strong class="fs-5">Total:</strong>
-                                <strong class="cart-total fs-5 text-primary">$@Model.CartItems.Sum(ci => ci.Book.Price * ci.Quantity).ToString("F2")</strong>
+                                <strong class="cart-total fs-5 text-primary" id="cart-total">$@Model.CartItems.Sum(ci => ci.Book.Price * ci.Quantity).ToString("F2")</strong>
                             </div>
-                            
+
                             <a href="@Url.Action("Checkout", "Cart")" class="btn btn-success w-100 mb-2">
                                 <i class="fas fa-credit-card me-2"></i>Proceed to Checkout
                             </a>
@@ -150,9 +141,6 @@
                                 <li>@Html.Raw(error)</li>
                             }
                         </ul>
-                        <small class="text-muted mt-2 d-block">
-                            Please adjust quantities or remove items to continue.
-                        </small>
                     </div>
                 }
 
@@ -162,147 +150,362 @@
                         <i class="fas fa-exclamation-circle me-2"></i>@TempData["Error"]
                     </div>
                 }
-               
+
+                @if (TempData["Success"] != null)
+                {
+                    <div class="alert alert-success mt-3">
+                        <i class="fas fa-check-circle me-2"></i>@TempData["Success"]
+                    </div>
+                }
             </div>
         </div>
     </div>
 </section>
 
-@section Scripts {
-    <script>
-        $(document).ready(function () {
-            // Get anti-forgery token
-            function getAntiForgeryToken() {
-                return $('input[name="__RequestVerificationToken"]').val();
-            }
+<!-- Hidden form for AJAX requests -->
+<form id="cartForm" style="display: none;">
+    @Html.AntiForgeryToken()
+</form>
 
-            // Quantity buttons
-            $('.quantity-btn').on('click', function () {
-                var button = $(this);
-                var bookId = button.data('book-id');
-                var action = button.data('action');
-                var input = $(`.quantity-input[data-book-id="${bookId}"]`);
-                var currentQty = parseInt(input.val());
-                var newQty = action === 'increase' ? currentQty + 1 : currentQty - 1;
+<script>
+    // Get CSRF token
+    function getToken() {
+        return document.querySelector('#cartForm input[name="__RequestVerificationToken"]').value;
+    }
 
-                updateQuantity(bookId, newQty);
-            });
+    // Update item total and cart total
+    function updateTotals() {
+        let cartTotal = 0;
 
-            // Manual input change
-            $('.quantity-input').on('change', function () {
-                var input = $(this);
-                var bookId = input.data('book-id');
-                var quantity = parseInt(input.val());
+        // Update each item total
+        document.querySelectorAll('.cart-item-row').forEach(row => {
+            const bookId = row.dataset.bookId;
+            const price = parseFloat(row.querySelector('.item-price').dataset.price);
+            const quantity = parseInt(row.querySelector('.quantity-input').value) || 0;
+            const itemTotal = price * quantity;
 
-                if (quantity > 0) {
-                    updateQuantity(bookId, quantity);
-                }
-            });
-
-            // Remove item
-            $('.remove-item-btn').on('click', function () {
-                var button = $(this);
-                var bookId = button.data('book-id');
-                var row = button.closest('tr');
-
-                $.ajax({
-                    url: '@Url.Action("RemoveFromCart", "Cart")',
-                    type: 'POST',
-                    headers: {
-                        'RequestVerificationToken': getAntiForgeryToken()
-                    },
-                    data: {
-                        bookId: bookId,
-                        __RequestVerificationToken: getAntiForgeryToken()
-                    },
-                    success: function (response) {
-                        if (response.success) {
-                            row.fadeOut(300, function () {
-                                row.remove();
-                                updateCartTotals(response.itemCount || 0,onse.cartTotal || '$0.00');
-                                if ($('.cart-item-row').length === 0) {
-                                    location.reload(); // Show empty state
-                                }
-                            });
-                        } else {
-                            alert('Error: ' + response.message);
-                        }
-                    },
-                    error: function () {
-                        alert('An error occurred while removing the item.');
-                    }
-                });
-            });
-
-            function updateQuantity(bookId, quantity) {
-                $.ajax({
-                    url: '@Url.Action("UpdateQuantity", "Cart")',
-                    type: 'POST',
-                    headers: {
-                        'RequestVerificationToken': getAntiForgeryToken()
-                    },
-                    data: {
-                        bookId: bookId,
-                        quantity: quantity,
-                        __RequestVerificationToken: getAntiForgeryToken()
-                    },
-                    success: function (response) {
-                        if (response.success) {
-                            // Update UI
-                            var row = $(`tr[data-book-id="${bookId}"]`);
-                            row.find('.quantity-input').val(response.quantity);
-                            row.find('.item-total').text('$' + response.itemTotal.toFixed(2));
-                            updateCartTotals(response.itemCount, response.cartTotal);
-
-                            // Update buttons
-                            var decreaseBtn = row.find('.quantity-btn[data-action="decrease"]');
-                            var increaseBtn = row.find('.quantity-btn[data-action="increase"]');
-                            decreaseBtn.prop('disabled', response.quantity <= 1);
-                            increaseBtn.prop('disabled', response.quantity >= row.find('.quantity-input').data('max'));
-                        } else {
-                            alert('Update failed: ' + response.message);
-                        }
-                    },
-                    error: function () {
-                        alert('An error occurred while updating quantity.');
-                    }
-                });
-            }
-
-            function updateCartTotals(itemCount, cartTotal) {
-                $('.cart-subtotal').text(cartTotal);
-                $('.cart-total').text(cartTotal);
-                // Update cart badge
-                $('.cart-count').text(itemCount || 0);
-            }
+            row.querySelector('.item-total').textContent = '$' + itemTotal.toFixed(2);
+            cartTotal += itemTotal;
         });
-    </script>
-}
+
+        // Update cart totals
+        document.getElementById('cart-subtotal').textContent = '$' + cartTotal.toFixed(2);
+        document.getElementById('cart-total').textContent = '$' + cartTotal.toFixed(2);
+    }
+
+    // Change quantity by increment/decrement
+    function changeQuantity(bookId, change, maxStock) {
+        const input = document.getElementById('qty-' + bookId);
+        let newQuantity = parseInt(input.value) + change;
+
+        if (newQuantity < 1) newQuantity = 1;
+        if (newQuantity > maxStock) {
+            alert('Only ' + maxStock + ' items available in stock');
+            return;
+        }
+
+        input.value = newQuantity;
+        updateQuantityOnServer(bookId, newQuantity);
+    }
+
+    // Update quantity from direct input
+    function updateQuantityFromInput(bookId, maxStock) {
+        const input = document.getElementById('qty-' + bookId);
+        let quantity = parseInt(input.value) || 1;
+
+        if (quantity < 1) {
+            if (confirm('Remove this item from cart?')) {
+                removeItem(bookId);
+                return;
+            } else {
+                input.value = 1;
+                quantity = 1;
+            }
+        }
+
+        if (quantity > maxStock) {
+            alert('Only ' + maxStock + ' items available in stock');
+            input.value = maxStock;
+            quantity = maxStock;
+        }
+
+        updateQuantityOnServer(bookId, quantity);
+    }
+
+    // Update quantity on server
+    function updateQuantityOnServer(bookId, quantity) {
+        // Update totals immediately for better UX
+        updateTotals();
+
+        fetch('@Url.Action("UpdateQuantity", "Cart")', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: new URLSearchParams({
+                'bookId': bookId,
+                'quantity': quantity,
+                '__RequestVerificationToken': getToken()
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (!data.success) {
+                alert(data.message || 'Error updating quantity');
+                location.reload(); // Refresh if server update failed
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error updating cart');
+            location.reload();
+        });
+    }
+
+    // Remove item from cart
+    function removeItem(bookId) {
+        if (!confirm('Remove this item from your cart?')) return;
+
+        fetch('@Url.Action("RemoveFromCart", "Cart")', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: new URLSearchParams({
+                'bookId': bookId,
+                '__RequestVerificationToken': getToken()
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Remove the row from the table
+                const row = document.querySelector(`tr[data-book-id="${bookId}"]`);
+                row.remove();
+
+                // Update totals
+                updateTotals();
+
+                // Check if cart is empty
+                if (document.querySelectorAll('.cart-item-row').length === 0) {
+                    location.reload(); // Refresh to show empty cart message
+                }
+            } else {
+                alert(data.message || 'Error removing item');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error removing item');
+            location.reload();
+        });
+    }
+</script>
 
 <style>
-    .quantity-controls {
-        max-width: 150px;
+    /* Cart Table Styling */
+    .cart-table {
+        margin-bottom: 0;
     }
-    
-    .quantity-input {
-        border-radius: 0;
+
+        .cart-table thead th {
+            background-color: #f8f9fa;
+            border-bottom: 2px solid #dee2e6;
+            font-weight: 600;
+            color: #495057;
+            text-align: center;
+            vertical-align: middle;
+            padding: 12px 8px;
+        }
+
+        .cart-table tbody td {
+            vertical-align: middle;
+            padding: 15px 8px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+    .cart-item-row:hover {
+        background-color: rgba(0, 123, 255, 0.05);
     }
-    
-    .quantity-btn {
-        border-radius: 0;
+
+    /* Product Cell */
+    .product-cell {
+        text-align: left !important;
+    }
+
+    .product-info {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .product-image {
         width: 35px;
-        height: 35px;
+        height: 45px;
+        object-fit: cover;
+        border-radius: 4px;
+        flex-shrink: 0;
+    }
+
+    .product-details {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .product-title {
+        font-size: 14px;
+        font-weight: 600;
+        margin: 0 0 4px 0;
+        color: #333;
+        line-height: 1.3;
+    }
+
+    .product-meta {
+        line-height: 1.4;
+    }
+
+        .product-meta small {
+            display: block;
+            margin-bottom: 2px;
+        }
+
+    /* Price Cell */
+    .price-cell {
+        text-align: center;
+    }
+
+    .item-price {
+        font-weight: 600;
+        color: #007bff;
+        font-size: 15px;
+    }
+
+    /* Quantity Cell */
+    .quantity-cell {
+        text-align: center;
+    }
+
+    .quantity-controls {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        justify-content: center;
+    }
+
+    .quantity-btn {
+        width: 30px;
+        height: 30px;
+        border: 1px solid #ced4da;
+        background: #f8f9fa;
+        color: #495057;
+        border-radius: 4px;
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s;
     }
-    
-    .cart-item-row:hover {
-        background-color: #f8f9fa;
+
+        .quantity-btn:hover {
+            background: #e9ecef;
+            border-color: #adb5bd;
+        }
+
+        .quantity-btn i {
+            font-size: 10px;
+        }
+
+    .quantity-input {
+        width: 50px;
+        height: 30px;
+        text-align: center;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        font-size: 14px;
+        padding: 4px;
     }
-    
-    .table th {
-        border-top: none;
+
+        .quantity-input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+        }
+
+    /* Total Cell */
+    .total-cell {
+        text-align: center;
+    }
+
+    .item-total {
         font-weight: 600;
+        color: #28a745;
+        font-size: 15px;
+    }
+
+    /* Action Cell */
+    .action-cell {
+        text-align: center;
+    }
+
+    .remove-btn {
+        padding: 6px 8px;
+        font-size: 12px;
+        border-radius: 4px;
+    }
+
+        .remove-btn:hover {
+            background-color: #dc3545;
+            color: white;
+            border-color: #dc3545;
+        }
+
+    /* Responsive Design */
+    @@media (max-width: 768px) {
+        .cart-table
+
+    {
+        font-size: 12px;
+    }
+
+    .product-image {
+        width: 40px;
+        height: 50px;
+    }
+
+    .product-title {
+        font-size: 12px;
+    }
+
+    .quantity-btn {
+        width: 25px;
+        height: 25px;
+    }
+
+    .quantity-input {
+        width: 40px;
+        height: 25px;
+        font-size: 12px;
+    }
+
+    .cart-table thead th,
+    .cart-table tbody td {
+        padding: 8px 4px;
+    }
+
+    }
+
+    @@media (max-width: 576px) {
+        .product-info
+
+    {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .product-meta small {
+        font-size: 10px;
+    }
+
     }
 </style>

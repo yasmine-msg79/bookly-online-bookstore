@@ -18,7 +18,6 @@ namespace BookStore.Data
             // many-to-many (Book ↔ Category)
             builder.Entity<Book>().HasMany(b => b.Categories).WithMany(c => c.Books);
 
-<<<<<<< HEAD
             // Cart relationships
             builder.Entity<Cart>()
                 .HasOne(c => c.User)
@@ -75,7 +74,7 @@ namespace BookStore.Data
                 .HasOne(br => br.Book)
                 .WithMany(b => b.Reviews)
                 .HasForeignKey(br => br.BookId);
-=======
+
             // Ensure email is unique
             builder.Entity<ApplicationUser>()
                 .HasIndex(u => u.Email)
@@ -137,7 +136,7 @@ namespace BookStore.Data
                 Description = "A story about teenage rebellion and angst.",
                 ImageUrl = "/images/The-Catcher-in-the-Rye.jpeg"
             });
->>>>>>> origin/main
+
         }
 
         public DbSet<Book> Books { get; set; }

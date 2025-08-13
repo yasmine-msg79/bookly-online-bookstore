@@ -3,8 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BookStore.Models
 {
-    public enum Role { SuperAdmin, Admin, Guest}
-    public enum Gender { Male, Female}
+    public enum Role { SuperAdmin, Admin, Guest }
+    public enum Gender { Male, Female }
     public class ApplicationUser : IdentityUser
     {
         [Required]

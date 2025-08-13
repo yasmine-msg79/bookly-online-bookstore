@@ -21,8 +21,7 @@ namespace BookStore.ViewComponents
         public async Task<IViewComponentResult> InvokeAsync()
         {
             int cartItemCount = 0;
-            
-            // Get cart count for authenticated user
+
             if (User.Identity?.IsAuthenticated == true)
             {
                 var user = await _userManager.GetUserAsync(HttpContext.User);
@@ -31,26 +30,25 @@ namespace BookStore.ViewComponents
                     var cart = await _context.Carts
                         .Include(c => c.CartItems)
                         .FirstOrDefaultAsync(c => c.UserId == user.Id);
-                    
+
                     if (cart != null)
                     {
-                        cartItemCount = cart.CartItems.Count;
+                        cartItemCount = cart.CartItems.Sum(item => item.Quantity); // Changed from .Count to .Sum
                     }
                 }
             }
             else
             {
-                // For guest users, check cookie-based cart
-                var cartId = Request.Cookies["CartId"];
+                var cartId = Request.Cookies["CartId"] ?? HttpContext.Session.GetString("CartId");
                 if (!string.IsNullOrEmpty(cartId))
                 {
                     var cart = await _context.Carts
                         .Include(c => c.CartItems)
                         .FirstOrDefaultAsync(c => c.Id.ToString() == cartId);
-                    
+
                     if (cart != null)
                     {
-                        cartItemCount = cart.CartItems.Count;
+                        cartItemCount = cart.CartItems.Sum(item => item.Quantity); // Changed from .Count to .Sum
                     }
                 }
             }

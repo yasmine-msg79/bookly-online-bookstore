@@ -36,8 +36,11 @@
                                         <tr>
                                             <td>
                                                 <div class="d-flex align-items-center">
-                                                    <img src="~/images/category1.jpg" alt="@item.Book.Title"
-                                                         style="width: 50px; height: 60px; object-fit: cover;" class="me-3 rounded">
+                                                    <img src="@(string.IsNullOrEmpty(item.Book.ImageUrl) ? "~/images/books/" + item.Book.Id + ".jpg" : item.Book.ImageUrl)"
+                                                         alt="@item.Book.Title"
+                                                         style="width: 50px; height: 60px; object-fit: cover;"
+                                                         class="me-3 rounded"
+                                                         onerror="this.src='~/images/default-book.jpg'">
                                                     <div>
                                                         <strong>@item.Book.Title</strong><br />
                                                         <small class="text-muted">@item.Book.Author</small>
@@ -79,20 +82,96 @@
                     </div>
                 </div>
 
-                <div class="alert alert-success text-center">
-                    <i class="fas fa-envelope me-2"></i>
-                    A confirmation email has been sent to <strong>@Model.ShippingEmail</strong>.
-                </div>
-
+                <!-- Action Buttons with Authentication Check -->
                 <div class="text-center mt-4">
                     <a href="@Url.Action("Index", "Books")" class="btn btn-outline-primary me-2">
                         <i class="fas fa-store me-2"></i>Continue Shopping
                     </a>
-                    <a href="@Url.Action("OrderHistory", "Cart")" class="btn btn-primary">
-                        <i class="fas fa-history me-2"></i>View Order History
-                    </a>
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <a href="@Url.Action("OrderHistory", "Cart")" class="btn btn-primary">
+                            <i class="fas fa-history me-2"></i>View Order History
+                        </a>
+                    }
+                    
+                </div>
+
+                <!-- Additional Information for Non-Authenticated Users -->
+                @if (!User.Identity.IsAuthenticated)
+                {
+                    <div class="alert alert-info mt-4">
+                        <div class="d-flex">
+                            <i class="fas fa-info-circle me-3 mt-1"></i>
+                            <div>
+                                <h6 class="alert-heading">Create an Account for Better Experience!</h6>
+                                <p class="mb-2">By creating an account, you can:</p>
+                                <ul class="mb-2">
+                                    <li>Track your order status</li>
+                                    <li>View your order history</li>
+                                    <li>Save your shipping information</li>
+                                    <li>Get personalized book recommendations</li>
+                                </ul>
+                                <div class="mt-3">
+                                    <a href="/Identity/Account/Register" class="btn btn-info btn-sm me-2">
+                                        <i class="fas fa-user-plus me-1"></i>Create Account
+                                    </a>
+                                    <a href="/Identity/Account/Login" class="btn btn-outline-info btn-sm">
+                                        <i class="fas fa-sign-in-alt me-1"></i>Login
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                <!-- Order Tracking Information -->
+                <div class="card shadow-sm mt-4">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0"><i class="fas fa-truck me-2"></i>What's Next?</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h6><i class="fas fa-box text-warning me-2"></i>Processing</h6>
+                                <p class="text-muted small">Your order will be processed within 1-2 business days</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h6><i class="fas fa-shipping-fast text-info me-2"></i>Shipping</h6>
+                                <p class="text-muted small">Standard delivery takes 3-5 business days</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h6><i class="fas fa-phone text-success me-2"></i>Support</h6>
+                                <p class="text-muted small">Questions? Contact us at support@bookstore.com</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+    .alert-info {
+        background-color: #f8f9ff;
+        border-color: #b3d4fc;
+        color: #0c5460;
+    }
+
+    .card {
+        transition: transform 0.2s ease-in-out;
+    }
+
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+    .btn {
+        transition: all 0.2s ease-in-out;
+    }
+
+        .btn:hover {
+            transform: translateY(-1px);
+        }
+</style>
