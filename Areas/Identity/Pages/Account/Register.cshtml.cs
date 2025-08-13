@@ -5,47 +5,36 @@ using BookStore.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
-<<<<<<< HEAD
 using BookStore.Models;
 using Microsoft.AspNetCore.Identity.UI.Services;
-=======
->>>>>>> origin/main
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System;
+
 
 namespace BookStore.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
-<<<<<<< HEAD
-        private readonly SignInManager<ApplicationUser> _signInManager;
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly IUserStore<ApplicationUser> _userStore;
-        private readonly IUserEmailStore<ApplicationUser> _emailStore;
-        private readonly ILogger<RegisterModel> _logger;
-        private readonly IEmailSender _emailSender;
 
-        public RegisterModel(
-            UserManager<ApplicationUser> userManager,
-            IUserStore<ApplicationUser> userStore,
-            SignInManager<ApplicationUser> signInManager,
-            ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
-=======
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IWebHostEnvironment _environment;
+        private readonly IUserStore<ApplicationUser> _userStore;
 
-        public RegisterModel(UserManager<ApplicationUser> userManager,
-                              SignInManager<ApplicationUser> signInManager,
-                              IWebHostEnvironment environment)
->>>>>>> origin/main
+
+        public RegisterModel(
+     UserManager<ApplicationUser> userManager,
+     SignInManager<ApplicationUser> signInManager,
+     IUserStore<ApplicationUser> userStore,
+     IWebHostEnvironment environment)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _userStore = userStore;
             _environment = environment;
         }
+
 
         [BindProperty]
         public InputModel Input { get; set; }
@@ -53,30 +42,7 @@ namespace BookStore.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
-<<<<<<< HEAD
-            [Display(Name = "First Name")]
-            public string FirstName { get; set; }
 
-            [Required]
-            [Display(Name = "Last Name")]
-            public string LastName { get; set; }
-
-            [Required]
-            [Display(Name = "Gender")]
-            public Gender Gender { get; set; }
-
-            [Display(Name = "Profile Image URL")]
-            public string ProfileImageURL { get; set; }
-
-            [Phone]
-            [Display(Name = "Phone Number")]
-            public string PhoneNumber { get; set; }
-
-            /// <summary>
-            ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-            ///     directly from your code. This API may change or be removed in future releases.
-            /// </summary>
-=======
             public string FirstName { get; set; }
 
             [Required]
@@ -86,7 +52,7 @@ namespace BookStore.Areas.Identity.Pages.Account
             [Display(Name = "Username")]
             public string UserName { get; set; }
 
->>>>>>> origin/main
+
             [Required]
             [EmailAddress]
             public string Email { get; set; }
@@ -146,17 +112,6 @@ namespace BookStore.Areas.Identity.Pages.Account
                     Role = Role.Guest
                 };
 
-<<<<<<< HEAD
-                await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
-                await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
-                // Set custom fields
-                user.FirstName = Input.FirstName;
-                user.LastName = Input.LastName;
-                user.Gender = Input.Gender;
-                user.ProfileImageURL = string.IsNullOrWhiteSpace(Input.ProfileImageURL) ? "https://ui-avatars.com/api/?name=" + Input.FirstName + "+" + Input.LastName : Input.ProfileImageURL;
-                user.PhoneNumber = Input.PhoneNumber;
-=======
->>>>>>> origin/main
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
@@ -175,7 +130,6 @@ namespace BookStore.Areas.Identity.Pages.Account
 
             return Page();
         }
-<<<<<<< HEAD
 
         private ApplicationUser CreateUser()
         {
@@ -199,7 +153,6 @@ namespace BookStore.Areas.Identity.Pages.Account
             }
             return (IUserEmailStore<ApplicationUser>)_userStore;
         }
-=======
->>>>>>> origin/main
+
     }
 }

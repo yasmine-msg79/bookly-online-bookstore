@@ -1816,7 +1816,6 @@
         }
       },
       "System.Data.DataSetExtensions/4.5.0": {},
-<<<<<<< HEAD
       "System.Diagnostics.DiagnosticSource/6.0.1": {
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
@@ -1842,10 +1841,6 @@
           }
         }
       },
-=======
-      "System.Diagnostics.DiagnosticSource/8.0.1": {},
-      "System.Diagnostics.EventLog/8.0.0": {},
->>>>>>> origin/main
       "System.Formats.Asn1/8.0.2": {},
       "System.IdentityModel.Tokens.Jwt/6.35.0": {
         "dependencies": {

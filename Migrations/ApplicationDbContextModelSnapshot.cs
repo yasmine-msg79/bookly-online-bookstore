@@ -91,12 +91,7 @@ namespace BookStore.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("ProfileImageURL")
-<<<<<<< HEAD
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
-=======
-                        .HasColumnType("longtext");
->>>>>>> origin/main
 
                     b.Property<int>("Role")
                         .HasColumnType("int");
@@ -114,7 +109,8 @@ namespace BookStore.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("Email")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[Email] IS NOT NULL");
 
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
@@ -150,7 +146,7 @@ namespace BookStore.Migrations
 
                     b.Property<string>("ImageUrl")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
@@ -498,19 +494,12 @@ namespace BookStore.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-<<<<<<< HEAD
                         .HasMaxLength(128)
                         .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("ProviderKey")
                         .HasMaxLength(128)
                         .HasColumnType("nvarchar(128)");
-=======
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<string>("ProviderKey")
-                        .HasColumnType("varchar(255)");
->>>>>>> origin/main
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
@@ -547,19 +536,12 @@ namespace BookStore.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
-<<<<<<< HEAD
                         .HasMaxLength(128)
                         .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("Name")
                         .HasMaxLength(128)
                         .HasColumnType("nvarchar(128)");
-=======
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("varchar(255)");
->>>>>>> origin/main
 
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");

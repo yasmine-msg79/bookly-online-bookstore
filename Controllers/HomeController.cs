@@ -2,7 +2,6 @@ using BookStore.Models;
 using BookStore.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using SQLitePCL;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Identity;
 

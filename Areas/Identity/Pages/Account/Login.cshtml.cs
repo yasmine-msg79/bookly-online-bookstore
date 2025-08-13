@@ -4,26 +4,19 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
-<<<<<<< HEAD
-using BookStore.Models;
-using Microsoft.AspNetCore.Identity.UI.Services;
-=======
->>>>>>> origin/main
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-using BookStore.Models;  // Your ApplicationUser namespace
+using BookStore.Models;
+using Microsoft.AspNetCore.Identity.UI.Services;
+
 
 namespace BookStore.Areas.Identity.Pages.Account
 {
     public class LoginModel : PageModel
     {
         private readonly SignInManager<ApplicationUser> _signInManager;
-<<<<<<< HEAD
-        private readonly ILogger<LoginModel> _logger;
 
-        public LoginModel(SignInManager<ApplicationUser> signInManager, ILogger<LoginModel> logger)
-=======
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<LoginModel> _logger;
 
@@ -31,7 +24,7 @@ namespace BookStore.Areas.Identity.Pages.Account
             SignInManager<ApplicationUser> signInManager,
             UserManager<ApplicationUser> userManager,
             ILogger<LoginModel> logger)
->>>>>>> origin/main
+
         {
             _signInManager = signInManager;
             _userManager = userManager;
