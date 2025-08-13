@@ -267,7 +267,13 @@
                   @if(isSuperAdmin) 
                   {
                      <li class="nav-item">
-                       <a class="nav-link me-4" href="~/Identity/Account/AddAdmin">Add Admins</a>
+                       <a class="nav-link me-4" href="~/Identity/Account/AddAdmin")">Add Admins</a>
+                     </li>
+                  }
+                  @if(user.Role != Role.Guest) 
+                  {
+                     <li class="nav-item">
+                       <a class="nav-link me-4" href="@Url.Action("Dashboard","Dashboard")">Dashboard</a>
                      </li>
                   }
 

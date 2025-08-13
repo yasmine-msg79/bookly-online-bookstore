@@ -85,6 +85,11 @@ namespace BookStore.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = await _userManager.FindByEmailAsync(Input.Email);
+                if(user.IsSuspended)
+                {
+                    ModelState.AddModelError("", "Your account is suspended.");
+                    return Page();
+                }
                 if (user == null)
                 {
                     //Console.WriteLine("********** ");

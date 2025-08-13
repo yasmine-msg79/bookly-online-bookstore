@@ -3,40 +3,8 @@
   "WorkspaceRootPath": "D:\\VS Projects\\BookStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AA3F8197-4CBC-4CD2-9B5F-A761B4C744C8}|BookStore.csproj|d:\\vs projects\\bookstore\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA3F8197-4CBC-4CD2-9B5F-A761B4C744C8}|BookStore.csproj|solutionrelative:areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA3F8197-4CBC-4CD2-9B5F-A761B4C744C8}|BookStore.csproj|d:\\vs projects\\bookstore\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AA3F8197-4CBC-4CD2-9B5F-A761B4C744C8}|BookStore.csproj|solutionrelative:areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA3F8197-4CBC-4CD2-9B5F-A761B4C744C8}|BookStore.csproj|d:\\vs projects\\bookstore\\areas\\identity\\pages\\account\\addadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AA3F8197-4CBC-4CD2-9B5F-A761B4C744C8}|BookStore.csproj|solutionrelative:areas\\identity\\pages\\account\\addadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA3F8197-4CBC-4CD2-9B5F-A761B4C744C8}|BookStore.csproj|d:\\vs projects\\bookstore\\areas\\identity\\pages\\account\\addadmin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA3F8197-4CBC-4CD2-9B5F-A761B4C744C8}|BookStore.csproj|solutionrelative:areas\\identity\\pages\\account\\addadmin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA3F8197-4CBC-4CD2-9B5F-A761B4C744C8}|BookStore.csproj|d:\\vs projects\\bookstore\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA3F8197-4CBC-4CD2-9B5F-A761B4C744C8}|BookStore.csproj|solutionrelative:models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA3F8197-4CBC-4CD2-9B5F-A761B4C744C8}|BookStore.csproj|d:\\vs projects\\bookstore\\viewmodel\\addadminviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA3F8197-4CBC-4CD2-9B5F-A761B4C744C8}|BookStore.csproj|solutionrelative:viewmodel\\addadminviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA3F8197-4CBC-4CD2-9B5F-A761B4C744C8}|BookStore.csproj|d:\\vs projects\\bookstore\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA3F8197-4CBC-4CD2-9B5F-A761B4C744C8}|BookStore.csproj|solutionrelative:areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AA3F8197-4CBC-4CD2-9B5F-A761B4C744C8}|BookStore.csproj|d:\\vs projects\\bookstore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{AA3F8197-4CBC-4CD2-9B5F-A761B4C744C8}|BookStore.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA3F8197-4CBC-4CD2-9B5F-A761B4C744C8}|BookStore.csproj|d:\\vs projects\\bookstore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA3F8197-4CBC-4CD2-9B5F-A761B4C744C8}|BookStore.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,61 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\VS Projects\\BookStore\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\VS Projects\\BookStore\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAIwEsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T07:32:28.726Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Register.cshtml.cs",
-              "DocumentMoniker": "D:\\VS Projects\\BookStore\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ToolTip": "D:\\VS Projects\\BookStore\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAqwHMAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T21:31:41.978Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "D:\\VS Projects\\BookStore\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ToolTip": "D:\\VS Projects\\BookStore\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-11T21:30:25.587Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Login.cshtml.cs",
-              "DocumentMoniker": "D:\\VS Projects\\BookStore\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "ToolTip": "D:\\VS Projects\\BookStore\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAcwFwAAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T21:25:08.004Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
@@ -111,67 +26,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\VS Projects\\BookStore\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\VS Projects\\BookStore\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAIBAAAAAAAAAAAuwBABAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIIAAAAAAAAAAAApwA0BAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-11T20:26:45.739Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AddAdminViewModel.cs",
-              "DocumentMoniker": "D:\\VS Projects\\BookStore\\ViewModel\\AddAdminViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\AddAdminViewModel.cs",
-              "ToolTip": "D:\\VS Projects\\BookStore\\ViewModel\\AddAdminViewModel.cs",
-              "RelativeToolTip": "ViewModel\\AddAdminViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T20:57:46.768Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "D:\\VS Projects\\BookStore\\Models\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "Models\\ApplicationUser.cs",
-              "ToolTip": "D:\\VS Projects\\BookStore\\Models\\ApplicationUser.cs",
-              "RelativeToolTip": "Models\\ApplicationUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T20:53:42.239Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AddAdmin.cshtml.cs",
-              "DocumentMoniker": "D:\\VS Projects\\BookStore\\Areas\\Identity\\Pages\\Account\\AddAdmin.cshtml.cs",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\AddAdmin.cshtml.cs",
-              "ToolTip": "D:\\VS Projects\\BookStore\\Areas\\Identity\\Pages\\Account\\AddAdmin.cshtml.cs",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\AddAdmin.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T20:38:42.449Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AddAdmin.cshtml",
-              "DocumentMoniker": "D:\\VS Projects\\BookStore\\Areas\\Identity\\Pages\\Account\\AddAdmin.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\AddAdmin.cshtml",
-              "ToolTip": "D:\\VS Projects\\BookStore\\Areas\\Identity\\Pages\\Account\\AddAdmin.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\AddAdmin.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-11T20:38:33.103Z",
+              "WhenOpened": "2025-08-12T21:09:03.329Z",
               "EditorCaption": ""
             }
           ]

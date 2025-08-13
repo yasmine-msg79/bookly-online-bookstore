@@ -17,93 +17,87 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BookStore
 build_property.RootNamespace = BookStore
-build_property.ProjectDir = C:\Users\DR.Mahmoud\vscode-projects\Ejada-Online-BookStore\
+build_property.ProjectDir = D:\VS Projects\BookStore\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\DR.Mahmoud\vscode-projects\Ejada-Online-BookStore
+build_property.MSBuildProjectDirectory = D:\VS Projects\BookStore
 build_property._RazorSourceGeneratorDebug = 
-build_property.EffectiveAnalysisLevelStyle = 8.0
-build_property.EnableCodeStyleSeverity = 
 
-<<<<<<< HEAD
 [D:/VS Projects/BookStore/Areas/Identity/Pages/Account/AddAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxBZGRBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/VS Projects/BookStore/Areas/Identity/Pages/Account/Login.cshtml]
-=======
-[C:/Users/DR.Mahmoud/vscode-projects/Ejada-Online-BookStore/Areas/Identity/Pages/Account/Login.cshtml]
->>>>>>> 61c834405a257939d65a0e25819a0d17adc34e8e
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DR.Mahmoud/vscode-projects/Ejada-Online-BookStore/Areas/Identity/Pages/Account/Logout.cshtml]
+[D:/VS Projects/BookStore/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-<<<<<<< HEAD
 [D:/VS Projects/BookStore/Areas/Identity/Pages/Account/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/VS Projects/BookStore/Areas/Identity/Pages/Account/Register.cshtml]
-=======
-[C:/Users/DR.Mahmoud/vscode-projects/Ejada-Online-BookStore/Areas/Identity/Pages/Account/Register.cshtml]
->>>>>>> 61c834405a257939d65a0e25819a0d17adc34e8e
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DR.Mahmoud/vscode-projects/Ejada-Online-BookStore/Areas/Identity/Pages/Account/ResetPassword.cshtml]
+[D:/VS Projects/BookStore/Areas/Identity/Pages/Account/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DR.Mahmoud/vscode-projects/Ejada-Online-BookStore/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[D:/VS Projects/BookStore/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DR.Mahmoud/vscode-projects/Ejada-Online-BookStore/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[D:/VS Projects/BookStore/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DR.Mahmoud/vscode-projects/Ejada-Online-BookStore/Areas/Identity/Pages/_ViewImports.cshtml]
+[D:/VS Projects/BookStore/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DR.Mahmoud/vscode-projects/Ejada-Online-BookStore/Areas/Identity/Pages/_ViewStart.cshtml]
+[D:/VS Projects/BookStore/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DR.Mahmoud/vscode-projects/Ejada-Online-BookStore/Views/Home/Index.cshtml]
+[D:/VS Projects/BookStore/Views/Dashboard/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXERhc2hib2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VS Projects/BookStore/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DR.Mahmoud/vscode-projects/Ejada-Online-BookStore/Views/Home/Privacy.cshtml]
+[D:/VS Projects/BookStore/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DR.Mahmoud/vscode-projects/Ejada-Online-BookStore/Views/Shared/Error.cshtml]
+[D:/VS Projects/BookStore/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DR.Mahmoud/vscode-projects/Ejada-Online-BookStore/Views/Shared/_LoginPartial.cshtml]
+[D:/VS Projects/BookStore/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DR.Mahmoud/vscode-projects/Ejada-Online-BookStore/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/VS Projects/BookStore/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DR.Mahmoud/vscode-projects/Ejada-Online-BookStore/Views/_ViewImports.cshtml]
+[D:/VS Projects/BookStore/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DR.Mahmoud/vscode-projects/Ejada-Online-BookStore/Views/_ViewStart.cshtml]
+[D:/VS Projects/BookStore/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DR.Mahmoud/vscode-projects/Ejada-Online-BookStore/Views/Shared/_Layout.cshtml]
+[D:/VS Projects/BookStore/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-tqf8g8k84y
