@@ -150,7 +150,17 @@
                                 <p class="card-text text-muted book-author">by @book.Author</p>
 
                                 <!-- Categories -->
-                                @if (book.Categories?.Any() == true)
+                                @if(book.Category != null)
+                                {
+                                    <div class="book-categories mb-2">
+                                        <span class="badge bg-light text-dark me-1">@book.Category.Name</span>
+                                        @* @if (book.Categories.Count > 2)
+                                        {
+                                            <span class="badge bg-light text-dark">+@(book.Categories.Count - 2) more</span>
+                                        } *@
+                                    </div>
+                                }
+                               @*  @if (book.Categories?.Any() == true)
                                 {
                                     <div class="book-categories mb-2">
                                         @foreach (var category in book.Categories.Take(2))
@@ -162,7 +172,7 @@
                                             <span class="badge bg-light text-dark">+@(book.Categories.Count - 2) more</span>
                                         }
                                     </div>
-                                }
+                                } *@
 
                                 <!-- Description -->
                                 @if (!string.IsNullOrEmpty(book.Description))

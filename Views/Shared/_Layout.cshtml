@@ -215,6 +215,12 @@
                                 }
                                 else
                                 {
+                                    var user = await UserManager.GetUserAsync(User);
+                                    @if(user.Role == Role.Admin)
+                                    {
+                                        <li><a href="/Book/BookAndCategoryManagement" class="dropdown-item fw-light">Books & Categories</a></li>
+                                                <li><a href="/Book/StockManagement" class="dropdown-item fw-light">Stock</a></li>
+                                    }
                                     <li>
                                         <a href="@Url.Action("Index", "Books")" class="dropdown-item fw-light">Shop</a>
                                     </li>

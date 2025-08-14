@@ -19,9 +19,14 @@ namespace BookStore.Repositories
             return _context.Books.ToList();
         }
 
-        public Book GetBookById(int id)
+        public Book? GetByISBN(string isbn)
         {
-            return _context.Books.FirstOrDefault(b => b.Id == id) ?? throw new KeyNotFoundException($"Book with ID {id} not found.");
+            return _context.Books.FirstOrDefault(b => b.ISBN == isbn);
+        }
+
+        public Book? GetById(int id)
+        {
+            return _context.Books.FirstOrDefault(b => b.Id == id);
         }
 
         public void AddBook(Book book)

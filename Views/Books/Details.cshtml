@@ -123,7 +123,20 @@
                                     </div>
                                 </div>
 
-                                @if (Model.Categories?.Any() == true)
+                                @if(Model.Category != null)
+                                {
+                                    <div class="col-md-6">
+                                        <div class="detail-card">
+                                            <h6 class="detail-label">
+                                                <i class="fas fa-tags me-2"></i>Categories
+                                            </h6>
+                                            <div class="categories-list">
+                                                <span class="category-tag">@Model.Category.Name</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                @* @if (Model.Category?.Any() == true)
                                 {
                                     <div class="col-md-6">
                                         <div class="detail-card">
@@ -138,7 +151,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                }
+                                } *@
                             </div>
                         </div>
 

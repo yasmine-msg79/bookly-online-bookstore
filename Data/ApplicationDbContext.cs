@@ -13,8 +13,8 @@ namespace BookStore.Data
             base.OnModelCreating(builder);
             builder.Entity<Book>().HasIndex(b => b.ISBN).IsUnique();
 
-            // many-to-many (Book ↔ Category)
-            builder.Entity<Book>().HasMany(b => b.Categories).WithMany(c => c.Books);
+            //// many-to-many (Book ↔ Category)
+            //builder.Entity<Book>().HasMany(b => b.Category).WithMany(c => c.Books);
 
             // Ensure email is unique
             builder.Entity<ApplicationUser>()

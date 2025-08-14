@@ -39,7 +39,7 @@ namespace BookStore.Controllers
 
             // Start query
             var books = _context.Books
-                .Include(b => b.Categories)
+                .Include(b => b.Category)
                 .AsQueryable();
 
             // Search filter
@@ -54,8 +54,9 @@ namespace BookStore.Controllers
             // Category filter
             if (categoryId.HasValue)
             {
-                books = books.Where(b => b.Categories.Any(c => c.Id == categoryId.Value));
+                books = books.Where(b => b.Category.Id == categoryId.Value);
             }
+
 
             // Price filters
             if (minPrice.HasValue)
@@ -113,7 +114,7 @@ namespace BookStore.Controllers
         public async Task<IActionResult> Details(int id)
         {
             var book = await _context.Books
-                .Include(b => b.Categories)
+                .Include(b => b.Category)
                 .FirstOrDefaultAsync(b => b.Id == id);
 
             if (book == null)
