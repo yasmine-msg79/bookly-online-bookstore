@@ -30,7 +30,6 @@
                             <div class="banner-content">
                                 <h2>The Fine Print Book Collection</h2>
                                 <p>Best Offer Save 30%. Grab it now!</p>
-                                <a href="~/Home/Shop" class="btn mt-3">Shop Collection</a>
                             </div>
                         </div>
                         <div class="col-md-6 text-center">
@@ -50,7 +49,6 @@
                             <div class="banner-content">
                                 <h2>How Innovation Works</h2>
                                 <p>Discount available. Grab it now!</p>
-                                <a href="~/Home/Shop" class="btn mt-3">Shop Product</a>
                             </div>
                         </div>
                         <div class="col-md-6 text-center">
@@ -70,7 +68,6 @@
                             <div class="banner-content">
                                 <h2>Your Heart is the Sea</h2>
                                 <p>Limited stocks available. Grab it now!</p>
-                                <a href="~/Home/Shop" class="btn mt-3">Shop Collection</a>
                             </div>
                         </div>
                         <div class="col-md-6 text-center">
@@ -91,23 +88,46 @@
         @foreach (var book in Model)
         {
             <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                <a href="@Url.Action("Details", "Books", new { id = book.Id })" class="text-decoration-none text-reset">
-                    <div class="card h-100 border rounded-3 shadow-sm position-relative">
-                        @if (book.Price <= 15)
-                        {
-                            <span class="badge bg-danger position-absolute top-0 start-0 m-2" style="z-index: 10; font-size: 0.8rem;">10% off</span>
-                        }
+                @if (!User.Identity.IsAuthenticated)
+                {
+                    <a href="~/Identity/Account/Login" class="text-decoration-none text-reset">
+                        <div class="card h-100 border rounded-3 shadow-sm position-relative">
+                            @if (book.Price <= 15)
+                            {
+                                <span class="badge bg-danger position-absolute top-0 start-0 m-2" style="z-index: 10; font-size: 0.8rem;">10% off</span>
+                            }
 
-                        <img src="@book.ImageUrl" alt="@book.Title" class="card-img-top rounded-3" style="height: 220px; object-fit: contain; padding: 10px;" />
+                            <img src="@book.ImageUrl" alt="@book.Title" class="card-img-top rounded-3" style="height: 220px; object-fit: contain; padding: 10px;" />
 
-                        <div class="card-body px-2 pt-2 pb-3 d-flex flex-column">
-                            <h6 class="card-title fw-semibold mb-1">@book.Title</h6>
-                            <p class="text-danger small mb-1" style="font-weight: 300;">@book.Author</p>
+                            <div class="card-body px-2 pt-2 pb-3 d-flex flex-column">
+                                <h6 class="card-title fw-semibold mb-1">@book.Title</h6>
+                                <p class="text-danger small mb-1" style="font-weight: 300;">@book.Author</p>
 
-                            <p class="text-danger fw-bold fs-5 mb-0">$@book.Price.ToString("0")</p>
+                                <p class="text-danger fw-bold fs-5 mb-0">$@book.Price.ToString("0")</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                }
+                else
+                {
+                    <a href="@Url.Action("Details", "Books", new { id = book.Id })" class="text-decoration-none text-reset">
+                        <div class="card h-100 border rounded-3 shadow-sm position-relative">
+                            @if (book.Price <= 15)
+                            {
+                                <span class="badge bg-danger position-absolute top-0 start-0 m-2" style="z-index: 10; font-size: 0.8rem;">10% off</span>
+                            }
+
+                            <img src="@book.ImageUrl" alt="@book.Title" class="card-img-top rounded-3" style="height: 220px; object-fit: contain; padding: 10px;" />
+
+                            <div class="card-body px-2 pt-2 pb-3 d-flex flex-column">
+                                <h6 class="card-title fw-semibold mb-1">@book.Title</h6>
+                                <p class="text-danger small mb-1" style="font-weight: 300;">@book.Author</p>
+
+                                <p class="text-danger fw-bold fs-5 mb-0">$@book.Price.ToString("0")</p>
+                            </div>
+                        </div>
+                    </a>
+                }
             </div>
         }
     </div>

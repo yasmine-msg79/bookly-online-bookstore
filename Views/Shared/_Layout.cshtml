@@ -155,396 +155,199 @@
         </ul>
       </div>
     </div>
-
-    <div class="search-popup">
-      <div class="search-popup-container">
-
-        <form role="search" method="get" class="search-form" action="">
-          <input type="search" id="search-form" class="search-field" placeholder="Type and press enter" value=""
-            name="s" />
-          <button type="submit" class="search-submit"><svg class="search">
-              <use xlink:href="#search"></use>
-            </svg></button>
-        </form>
-
-        <h5 class="cat-list-title">Browse Categories</h5>
-
-        <ul class="cat-list">
-          <li class="cat-list-item">
-            <a href="#" title="Romance">Romance</a>
-          </li>
-          <li class="cat-list-item">
-            <a href="#" title="Thriller">Thriller</a>
-          </li>
-          <li class="cat-list-item">
-            <a href="#" title="Sci-fi">Sci-fi</a>
-          </li>
-          <li class="cat-list-item">
-            <a href="#" title="Cooking">Cooking</a>
-          </li>
-          <li class="cat-list-item">
-            <a href="#" title="Health">Health</a>
-          </li>
-          <li class="cat-list-item">
-            <a href="#" title="Lifestyle">Lifestyle</a>
-          </li>
-          <li class="cat-list-item">
-            <a href="#" title="Fiction">Fiction</a>
-          </li>
-        </ul>
-
-      </div>
     </div>
 
-    <header id="header" class="site-header">
-      <nav id="header-nav" class="navbar navbar-expand-lg py-3">
+    <nav id="header-nav" class="navbar navbar-expand-lg py-3">
         <div class="container">
-          <a class="navbar-brand" href="index.html">
-            <img src="~/images/main-logo.png" class="logo">
-          </a>
-          <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
-            <svg class="navbar-icon">
-              <use xlink:href="#navbar-icon"></use>
-            </svg>
-          </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
-            <div class="offcanvas-header px-4 pb-0">
-              <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.html">
                 <img src="~/images/main-logo.png" class="logo">
-              </a>
-              <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close"
-                data-bs-target="#bdNavbar"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul id="navbar"
-                class="navbar-nav text-uppercase justify-content-start justify-content-lg-center align-items-start align-items-lg-center flex-grow-1">
-                <li class="nav-item">
-                  <a class="nav-link me-4 active" href="@Url.Action("Index","Home")">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link me-4" href="@Url.Action("Index","Home")">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link me-4" href="index.html">Shop</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link me-4 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                    aria-expanded="false">Pages</a>
-                  <ul class="dropdown-menu animate slide border">
-                    <li>
-                      <a href="@Url.Action("Index","Home")" class="dropdown-item fw-light">About</a>
-                    </li>
-                    <li>
-                      <a href="@Url.Action("Index","Home")" class="dropdown-item fw-light">Shop</a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item fw-light">Cart</a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item fw-light">Contact</a>
-                    </li>
-                  </ul>
-                </li>
-                @if(!User.Identity.IsAuthenticated) 
-                {
-                  <li class="nav-item">
-                    <a class="nav-link me-4" href="~/Identity/Account/Register">Register</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link me-4" href="~/Identity/Account/Login">Login</a>
-                  </li>
-                }
-                else 
-                {
-                  var user = await UserManager.GetUserAsync(User);
-                  bool isSuperAdmin = false;
+            </a>
+            <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <svg class="navbar-icon">
+                    <use xlink:href="#navbar-icon"></use>
+                </svg>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
+                <div class="offcanvas-header px-4 pb-0">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="~/images/main-logo.png" class="logo">
+                    </a>
+                    <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close"
+                            data-bs-target="#bdNavbar"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul id="navbar"
+                        class="navbar-nav text-uppercase justify-content-start justify-content-lg-center align-items-start align-items-lg-center flex-grow-1">
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link me-4 active" href="@Url.Action("Index", "Home")">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-4" href="~/Identity/Account/Login">Shop</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link me-4 active" href="@Url.Action("Index", "Home")">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-4" href="@Url.Action("Index", "Books")">Shop</a>
+                            </li>
+                        }
+                        <li class="nav-item dropdown">
+                            <a class="nav-link me-4 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                               aria-expanded="false">Pages</a>
+                            <ul class="dropdown-menu animate slide border">
+                                @if (!User.Identity.IsAuthenticated)
+                                {
+                                    <li>
+                                        <a href="~/Identity/Account/Login" class="dropdown-item fw-light">Shop</a>
+                                    </li>
+                                    <li>
+                                        <a href="~/Identity/Account/Login" class="dropdown-item fw-light">Cart</a>
+                                    </li>
+                                    <li>
+                                        <a href="~/Identity/Account/Login" class="dropdown-item fw-light">Your Orders</a>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li>
+                                        <a href="@Url.Action("Index", "Books")" class="dropdown-item fw-light">Shop</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Index", "Cart")" class="dropdown-item fw-light">Cart</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("OrderHistory", "Cart")" class="dropdown-item fw-light">Your Orders</a>
+                                    </li>
+                                }
+                                
+                            </ul>
+                        </li>
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link me-4" href="~/Identity/Account/Register">Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-4" href="~/Identity/Account/Login">Login</a>
+                            </li>
+                        }
+                        else
+                        {
+                            var user = await UserManager.GetUserAsync(User);
+                            bool isSuperAdmin = false;
 
-                  if (user != null)
-                  {
-                     isSuperAdmin = user.Role == BookStore.Models.Role.SuperAdmin;
-                  }
-                  @if(isSuperAdmin) 
-                  {
-                     <li class="nav-item">
-                       <a class="nav-link me-4" href="~/Identity/Account/AddAdmin")">Add Admins</a>
-                     </li>
-                  }
-                  @if(user.Role != Role.Guest) 
-                  {
-                     <li class="nav-item">
-                       <a class="nav-link me-4" href="@Url.Action("Dashboard","Dashboard")">Dashboard</a>
-                     </li>
-                  }
+                            if (user != null)
+                            {
+                                isSuperAdmin = user.Role == BookStore.Models.Role.SuperAdmin;
+                            }
+                            @if (isSuperAdmin)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link me-4" href="~/Identity/Account/AddAdmin">Add Admins</a>
+                                </li>
+                            }
+                            @if (user.Role != Role.Guest)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link me-4" href="@Url.Action("Dashboard","Dashboard")">Dashboard</a>
+                                </li>
+                            }
 
-                  <li class="nav-item">
-                    <a class="nav-link me-4" href="~/Identity/Account/Logout">Logout</a>
-                  </li>
-                  <p class="mb-4" style="text-align: right; margin-top: 22px; margin-right: 20px;">
-                       Hi, @User.Identity.Name
-                  </p>
-                }
-              </ul>
-              @if(User.Identity.IsAuthenticated) 
-              {
-                  <div class="user-items d-flex">
-                <ul class="d-flex justify-content-end list-unstyled mb-0">
-                  <li class="search-item pe-3">
-                    <a href="#" class="search-button">
-                      <svg class="search">
-                        <use xlink:href="#search"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="pe-3">
-                  <a href="/Identity/Account/Profile" class="btn btn-link p-0">
-                     <svg class="user">
-                        <use xlink:href="#user"></use>
-                      </svg>
-                  </a>
-                  </li>
-                  <li class="wishlist-dropdown dropdown pe-3">
-                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
-                      <svg class="wishlist">
-                        <use xlink:href="#heart"></use>
-                      </svg>
-                    </a>
-                    <div class="dropdown-menu animate slide dropdown-menu-start dropdown-menu-lg-end p-3">
-                      <h4 class="d-flex justify-content-between align-items-center mb-3">
-                        <span class="text-primary">Your wishlist</span>
-                        <span class="badge bg-primary rounded-pill">2</span>
-                      </h4>
-                      <ul class="list-group mb-3">
-                        <li class="list-group-item bg-transparent d-flex justify-content-between lh-sm">
-                          <div>
-                            <h5>
-                              <a href="index.html">The Emerald Crown</a>
-                            </h5>
-                            <small>Special discounted price.</small>
-                            <a href="#" class="d-block fw-medium text-capitalize mt-2">Add to cart</a>
-                          </div>
-                          <span class="text-primary">$2000</span>
-                        </li>
-                        <li class="list-group-item bg-transparent d-flex justify-content-between lh-sm">
-                          <div>
-                            <h5>
-                              <a href="index.html">The Last Enchantment</a>
-                            </h5>
-                            <small>Perfect for enlightened people.</small>
-                            <a href="#" class="d-block fw-medium text-capitalize mt-2">Add to cart</a>
-                          </div>
-                          <span class="text-primary">$400</span>
-                        </li>
-                        <li class="list-group-item bg-transparent d-flex justify-content-between">
-                          <span class="text-capitalize"><b>Total (USD)</b></span>
-                          <strong>$1470</strong>
-                        </li>
-                      </ul>
-                      <div class="d-flex flex-wrap justify-content-center">
-                        <a href="#" class="w-100 btn btn-dark mb-1" type="submit">Add all to cart</a>
-                        <a href="index.html" class="w-100 btn btn-primary" type="submit">View cart</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="cart-dropdown dropdown">
-                    <a href="index.html" class="dropdown-toggle" data-bs-toggle="dropdown" role="button"
-                      aria-expanded="false">
-                      <svg class="cart">
-                        <use xlink:href="#cart"></use>
-                      </svg><span class="fs-6 fw-light">(02)</span>
-                    </a>
-                    <div class="dropdown-menu animate slide dropdown-menu-start dropdown-menu-lg-end p-3">
-                      <h4 class="d-flex justify-content-between align-items-center mb-3">
-                        <span class="text-primary">Your cart</span>
-                        <span class="badge bg-primary rounded-pill">2</span>
-                      </h4>
-                      <ul class="list-group mb-3">
-                        <li class="list-group-item bg-transparent d-flex justify-content-between lh-sm">
-                          <div>
-                            <h5>
-                              <a href="index.html">Secrets of the Alchemist</a>
-                            </h5>
-                            <small>High quality in good price.</small>
-                          </div>
-                          <span class="text-primary">$870</span>
-                        </li>
-                        <li class="list-group-item bg-transparent d-flex justify-content-between lh-sm">
-                          <div>
-                            <h5>
-                              <a href="index.html">Quest for the Lost City</a>
-                            </h5>
-                            <small>Professional Quest for the Lost City.</small>
-                          </div>
-                          <span class="text-primary">$600</span>
-                        </li>
-                        <li class="list-group-item bg-transparent d-flex justify-content-between">
-                          <span class="text-capitalize"><b>Total (USD)</b></span>
-                          <strong>$1470</strong>
-                        </li>
-                      </ul>
-                      <div class="d-flex flex-wrap justify-content-center">
-                        <a href="index.html" class="w-100 btn btn-dark mb-1" type="submit">View Cart</a>
-                        <a href="index.html" class="w-100 btn btn-primary" type="submit">Go to checkout</a>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              }
-              
+                            <li class="nav-item">
+                                <a class="nav-link me-4" href="~/Identity/Account/Logout">Logout</a>
+                            </li>
+                            <p class="mb-4" style="text-align: right; margin-top: 22px; margin-right: 20px;">
+                                Hi, @User.Identity.Name
+                            </p>
+                        }
+                    </ul>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <div class="user-items d-flex align-items-center">
+                            <ul class="d-flex justify-content-end list-unstyled mb-0">
+                                <!-- Search Icon -->
+                                <li class="search-item pe-3">
+                                    <a href="#" class="search-button">
+                                        @* <svg class="search">
+                                    <use xlink:href="#search"></use>
+                                    </svg> *@
+                                    </a>
+                                </li>
+
+                                <!-- User Profile -->
+                                <li class="pe-3">
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                                            <svg class="user">
+                                                <use xlink:href="#user"></use>
+                                            </svg>
+                                            <span class="ms-1 d-none d-lg-inline">@User.Identity.Name</span>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li><a class="dropdown-item" href="/Identity/Account/Profile">Profile</a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li>
+                                                <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })" method="post">
+                                                    <button type="submit" class="dropdown-item">Logout</button>
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <!-- Cart dropdown in your navigation -->
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" id="cartDropdown" role="button"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fas fa-shopping-cart" id="cartIcon"></i>
+                                        <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                            @await Component.InvokeAsync("CartSummary")
+                                        </span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cartDropdown">
+                                        <div id="cartDropdownContent">
+                                            @await Component.InvokeAsync("CartDropdown")
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- Success Toast -->
+                                <div class="toast-container position-fixed top-0 end-0 p-3">
+                                    <div id="successToast" class="toast" role="alert">
+                                        <div class="toast-header bg-success text-white">
+                                            <i class="fas fa-check-circle me-2"></i>
+                                            <strong class="me-auto">Success!</strong>
+                                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
+                                        </div>
+                                        <div class="toast-body" id="toastMessage">
+                                            Book added to cart successfully!
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Hidden form for CSRF token -->
+                                <form id="cartForm" style="display: none;">
+                                    @Html.AntiForgeryToken()
+                                </form>
+                            </ul>
+                        </div>
+                    }
+
+                </div>
             </div>
-          </div>
         </div>
-      </nav>
-
+    </nav>
     </header>
-
     
     @RenderBody()
     @await RenderSectionAsync("Scripts", required: false)
-    
-    <section id="customers-reviews" class="position-relative padding-large"
-      style="background-image: url(images/banner-image-bg.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; height: 600px;">
-      <div class="container offset-md-3 col-md-6 ">
-        <div class="position-absolute top-50 end-0 pe-0 pe-xxl-5 me-0 me-xxl-5 swiper-next testimonial-button-next">
-          <svg class="chevron-forward-circle d-flex justify-content-center align-items-center p-2" width="80" height="80">
-            <use xlink:href="#alt-arrow-right-outline"></use>
-          </svg>
-        </div>
-        <div class="position-absolute top-50 start-0 ps-0 ps-xxl-5 ms-0 ms-xxl-5 swiper-prev testimonial-button-prev">
-          <svg class="chevron-back-circle d-flex justify-content-center align-items-center p-2" width="80" height="80">
-            <use xlink:href="#alt-arrow-left-outline"></use>
-          </svg>
-        </div>
-        <div class="section-title mb-4 text-center">
-          <h3 class="mb-4">Customers reviews</h3>
-        </div>
-        <div class="swiper testimonial-swiper ">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="card position-relative text-left p-5 border rounded-3">
-                <blockquote>"I stumbled upon this bookstore while visiting the city, and it instantly became my favorite spot. The cozy atmosphere, friendly staff, and wide selection of books make every visit a delight!"</blockquote>
-                <div class="rating text-warning d-flex align-items-center">
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                </div>
-                <h5 class="mt-1 fw-normal">Emma Chamberlin</h5>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card position-relative text-left p-5 border rounded-3">
-                <blockquote>"As an avid reader, I'm always on the lookout for new releases, and this bookstore never disappoints. They always have the latest titles, and their recommendations have introduced me to some incredible reads!"</blockquote>
-                <div class="rating text-warning d-flex align-items-center">
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                </div>
-                <h5 class="mt-1 fw-normal">Thomas John</h5>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card position-relative text-left p-5 border rounded-3">
-                <blockquote>"I ordered a few books online from this store, and I was impressed by the quick delivery and careful packaging. It's clear that they prioritize customer satisfaction, and I'll definitely be shopping here again!"</blockquote>
-                <div class="rating text-warning d-flex align-items-center">
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                </div>
-                <h5 class="mt-1 fw-normal">Kevin Bryan</h5>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card position-relative text-left p-5 border rounded-3">
-                <blockquote>“I stumbled upon this tech store while searching for a new laptop, and I couldn't be happier
-                  with my experience! The staff was incredibly knowledgeable and guided me through the process of choosing
-                  the perfect device for my needs. Highly recommended!”</blockquote>
-                <div class="rating text-warning d-flex align-items-center">
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                </div>
-                <h5 class="mt-1 fw-normal">Stevin</h5>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card position-relative text-left p-5 border rounded-3">
-                <blockquote>“I stumbled upon this tech store while searching for a new laptop, and I couldn't be happier
-                  with my experience! The staff was incredibly knowledgeable and guided me through the process of choosing
-                  the perfect device for my needs. Highly recommended!”</blockquote>
-                <div class="rating text-warning d-flex align-items-center">
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                  <svg class="star star-fill">
-                    <use xlink:href="#star-fill"></use>
-                  </svg>
-                </div>
-                <h5 class="mt-1 fw-normal">Roman</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
+   
     <footer id="footer" class="padding-large">
       <div class="container">
         <div class="row">

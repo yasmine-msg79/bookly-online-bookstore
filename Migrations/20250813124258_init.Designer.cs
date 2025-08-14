@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookStore.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250811145313_seedData2")]
-    partial class seedData2
+    [Migration("20250813124258_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -65,6 +65,9 @@ namespace BookStore.Migrations
 
                     b.Property<int>("Gender")
                         .HasColumnType("int");
+
+                    b.Property<bool>("IsSuspended")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -177,6 +180,50 @@ namespace BookStore.Migrations
                             Price = 19.99m,
                             StockQuantity = 10,
                             Title = "The Great Gatsby"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Author = "George Orwell",
+                            Description = "A dystopian novel about totalitarianism.",
+                            ISBN = "2345678901234",
+                            ImageUrl = "/images/1984.jpg",
+                            Price = 15.99m,
+                            StockQuantity = 7,
+                            Title = "1984"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Author = "Harper Lee",
+                            Description = "A novel about racial injustice in the Deep South.",
+                            ISBN = "3456789012345",
+                            ImageUrl = "/images/To-Kill-a-Mockingbird.jpg",
+                            Price = 18.50m,
+                            StockQuantity = 12,
+                            Title = "To Kill a Mockingbird"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Author = "Jane Austen",
+                            Description = "A romantic novel about manners and marriage.",
+                            ISBN = "4567890123456",
+                            ImageUrl = "/images/Pride-and-Prejudice.jpeg",
+                            Price = 14.99m,
+                            StockQuantity = 15,
+                            Title = "Pride and Prejudice"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Author = "J.D. Salinger",
+                            Description = "A story about teenage rebellion and angst.",
+                            ISBN = "5678901234567",
+                            ImageUrl = "/images/The-Catcher-in-the-Rye.jpeg",
+                            Price = 16.99m,
+                            StockQuantity = 9,
+                            Title = "The Catcher in the Rye"
                         });
                 });
 
@@ -442,12 +489,10 @@ namespace BookStore.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("varchar(128)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ProviderKey")
-                        .HasMaxLength(128)
-                        .HasColumnType("varchar(128)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("longtext");
@@ -484,12 +529,10 @@ namespace BookStore.Migrations
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("varchar(128)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(128)
-                        .HasColumnType("varchar(128)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("Value")
                         .HasColumnType("longtext");

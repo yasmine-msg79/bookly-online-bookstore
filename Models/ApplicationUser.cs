@@ -14,8 +14,8 @@ namespace BookStore.Models
         public string? ProfileImageURL { get; set; }
         public Role Role { get; set; }
         public Gender Gender { get; set; }
-        public bool IsSuspended { get; set; } = false;  
-
+        public bool IsSuspended { get; set; } = false;
+        
         public virtual Cart Cart { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
         public virtual ICollection<BookReview> Reviews { get; set; }

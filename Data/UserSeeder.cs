@@ -51,9 +51,16 @@ public class UserSeeder
             }
         }
 
+        
+        if (!await _roleManager.RoleExistsAsync(superAdminRole))
+        {
+            await _roleManager.CreateAsync(new IdentityRole(superAdminRole));
+        }
+
         if (!await _userManager.IsInRoleAsync(user, superAdminRole))
         {
             await _userManager.AddToRoleAsync(user, superAdminRole);
         }
+
     }
 }

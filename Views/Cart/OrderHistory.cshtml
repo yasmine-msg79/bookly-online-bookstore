@@ -1,0 +1,99 @@
+﻿@model List<BookStore.Models.Order>
+@{
+    ViewData["Title"] = "Order History";
+    Layout = "_Layout";
+}
+
+<section class="padding-large bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <i class="fas fa-history text-info" style="font-size: 3rem;"></i>
+            <h1>Order History</h1>
+            <p class="lead">View your past orders and details.</p>
+        </div>
+
+        @if (!User.Identity.IsAuthenticated)
+        {
+            <!-- Not logged in: Show login prompt -->
+            <div class="text-center py-5">
+                <i class="fas fa-lock fa-3x text-muted mb-3"></i>
+                <h5 class="text-muted">Access Denied</h5>
+                <p class="text-muted">You must be logged in to view your order history.</p>
+                @{
+                    var returnUrl = ViewContext.HttpContext.Request.Path;
+                }
+                <a href="@Url.Page("/Account/Login", new { area = "Identity", returnUrl = returnUrl })" class="btn btn-primary">
+                    <i class="fas fa-sign-in-alt me-2"></i>Login
+                </a>
+            </div>
+        }
+        else
+        {
+            <!-- Logged in: Show their order history -->
+            @if (Model == null || !Model.Any())
+            {
+                <div class="text-center py-5">
+                    <i class="fas fa-box-open fa-3x text-muted mb-3"></i>
+                    <h5 class="text-muted">No orders yet</h5>
+                    <p class="text-muted">You haven't placed any orders.</p>
+                    <a href="@Url.Action("Index", "Books")" class="btn btn-primary">
+                        <i class="fas fa-shopping-bag me-2"></i>Start Shopping
+                    </a>
+                </div>
+            }
+            else
+            {
+                <!-- Display the list of orders -->
+                <div class="row">
+                    @foreach (var order in Model)
+                    {
+                        <div class="col-lg-12 mb-4">
+                            <div class="card shadow-sm border">
+                                <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                                    <h5 class="mb-0">
+                                        <i class="fas fa-receipt me-2 text-primary"></i>
+                                        Order # @order.Id
+                                    </h5>
+                                    <span class="badge bg-success">Placed on @order.Created.ToString("MMM dd, yyyy")</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <h6>Items:</h6>
+                                            <ul class="list-unstyled">
+                                                @foreach (var item in order.OrderItems.Take(3))
+                                                {
+                                                    <li>
+                                                        <strong>@item.Book.Title</strong> × @item.Quantity
+                                                        <span class="text-muted">($@item.Price.ToString("F2"))</span>
+                                                    </li>
+                                                }
+                                                @if (order.OrderItems.Count > 3)
+                                                {
+                                                    <li class="text-muted">+ @(order.OrderItems.Count - 3) more items</li>
+                                                }
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-4 text-md-end">
+                                            <h5>Total: <strong class="text-primary">$@order.TotalAmount.ToString("F2")</strong></h5>
+                                            <a href="@Url.Action("OrderConfirmed", "Cart", new { id = order.Id })" class="btn btn-sm btn-outline-primary mt-2">
+                                                <i class="fas fa-eye me-1"></i>View Details
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+
+            <!-- Continue shopping button (only shown when logged in) -->
+            <div class="text-center mt-4">
+                <a href="@Url.Action("Index", "Books")" class="btn btn-outline-secondary">
+                    <i class="fas fa-arrow-left me-2"></i>Continue Shopping
+                </a>
+            </div>
+        }
+    </div>
+</section>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZIOJo913ljhTce0DaOxJHz/RQcqgWnN4pVvZQvAZwLc=",
+  "Hash": "hSTdsKH918l569VsCrk3SrfVRTQCNDSUkUogypOxywA=",
   "Source": "BookStore",
   "BasePath": "_content/BookStore",
   "Mode": "Default",
@@ -2696,6 +2696,25 @@
       "OriginalItemSpec": "wwwroot\\images\\profile\\60bcbedc-01ed-479f-9067-71989c15dc83.jpg"
     },
     {
+      "Identity": "D:\\VS Projects\\BookStore\\wwwroot\\images\\profile\\716d9be8-4d43-4a3c-a691-c347a4086ed9.jpg",
+      "SourceId": "BookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\VS Projects\\BookStore\\wwwroot\\",
+      "BasePath": "_content/BookStore",
+      "RelativePath": "images/profile/716d9be8-4d43-4a3c-a691-c347a4086ed9.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\profile\\716d9be8-4d43-4a3c-a691-c347a4086ed9.jpg"
+    },
+    {
       "Identity": "D:\\VS Projects\\BookStore\\wwwroot\\images\\profile\\7e7ad41a-60d5-4f69-9deb-716e76c75f12.jpg",
       "SourceId": "BookStore",
       "SourceType": "Discovered",
@@ -2903,6 +2922,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\profile\\d3886f4c-97e1-4f1a-907d-78ed99960a83.jpg"
+    },
+    {
+      "Identity": "D:\\VS Projects\\BookStore\\wwwroot\\images\\profile\\df1005d1-03c9-4e49-8db0-3eb264148d2e.jpg",
+      "SourceId": "BookStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\VS Projects\\BookStore\\wwwroot\\",
+      "BasePath": "_content/BookStore",
+      "RelativePath": "images/profile/df1005d1-03c9-4e49-8db0-3eb264148d2e.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\profile\\df1005d1-03c9-4e49-8db0-3eb264148d2e.jpg"
     },
     {
       "Identity": "D:\\VS Projects\\BookStore\\wwwroot\\images\\profile\\eb4a7661-5297-4992-b982-4ac9906cc76d.jpg",

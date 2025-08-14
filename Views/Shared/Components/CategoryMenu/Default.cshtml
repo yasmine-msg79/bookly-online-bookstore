@@ -1,0 +1,14 @@
+﻿@model List<BookStore.Models.Category>
+
+<h5 class="cat-list-title">Browse Categories</h5>
+
+<ul class="cat-list">
+    @foreach (var category in Model)
+    {
+        <li class="cat-list-item">
+            <a href="@Url.Action("Index", "Books", new { categoryId = category.Id })" title="@category.Name">
+                @category.Name
+            </a>
+        </li>
+    }
+</ul>
