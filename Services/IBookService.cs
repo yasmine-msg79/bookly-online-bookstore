@@ -6,7 +6,7 @@ namespace BookStore.Services
     public interface IBookService
     {
         IEnumerable<Book> ListAllBooks();
-        Book GetBook(string id);
+        // Book GetBook(string id);
         Book? GetBookById(int id);
         void AddBook(Book book);
         void UpdateBook(Book book);

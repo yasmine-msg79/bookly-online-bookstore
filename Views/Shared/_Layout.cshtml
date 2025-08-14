@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@using BookStore.Models
+@inject UserManager<ApplicationUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager
+
+<!DOCTYPE html>
 <html>
 
   <head>
@@ -215,52 +220,70 @@
               <ul id="navbar"
                 class="navbar-nav text-uppercase justify-content-start justify-content-lg-center align-items-start align-items-lg-center flex-grow-1">
                 <li class="nav-item">
-                  <a class="nav-link me-4 active" href="index.html">Home</a>
+                  <a class="nav-link me-4 active" href="@Url.Action("Index","Home")">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link me-4" href="index.html">About</a>
+                  <a class="nav-link me-4" href="@Url.Action("Index","Home")">About</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link me-4" href="index.html">Shop</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link me-4" href="index.html">Blogs</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link me-4 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                     aria-expanded="false">Pages</a>
                   <ul class="dropdown-menu animate slide border">
                     <li>
-                      <a href="index.html" class="dropdown-item fw-light">About</a>
+                      <a href="@Url.Action("Index","Home")" class="dropdown-item fw-light">About</a>
                     </li>
                     <li>
-                      <a href="index.html" class="dropdown-item fw-light">Shop</a>
+                      <a href="@Url.Action("Index","Home")" class="dropdown-item fw-light">Shop</a>
                     </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item fw-light">Single Product</a>
-                    </li>
+                    <li><a href="/Book/BookAndCategoryManagement" class="dropdown-item fw-light">Books & Categories</a></li>
+                    <li><a href="/Book/StockManagement" class="dropdown-item fw-light">Stock</a></li>
                     <li>
                       <a href="index.html" class="dropdown-item fw-light">Cart</a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item fw-light">Checkout</a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item fw-light">Blog</a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item fw-light">Single Post</a>
                     </li>
                     <li>
                       <a href="index.html" class="dropdown-item fw-light">Contact</a>
                     </li>
                   </ul>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link me-4" href="index.html">Contact</a>
-                </li>
+                @if(!User.Identity.IsAuthenticated) 
+                {
+                  <li class="nav-item">
+                    <a class="nav-link me-4" href="~/Identity/Account/Register">Register</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link me-4" href="~/Identity/Account/Login">Login</a>
+                  </li>
+                }
+                else 
+                {
+                  var user = await UserManager.GetUserAsync(User);
+                  bool isSuperAdmin = false;
+
+                  if (user != null)
+                  {
+                     isSuperAdmin = user.Role == BookStore.Models.Role.SuperAdmin;
+                  }
+                  @if(isSuperAdmin) 
+                  {
+                     <li class="nav-item">
+                       <a class="nav-link me-4" href="~/Identity/Account/AddAdmin">Add Admins</a>
+                     </li>
+                  }
+
+                  <li class="nav-item">
+                    <a class="nav-link me-4" href="~/Identity/Account/Logout">Logout</a>
+                  </li>
+                  <p class="mb-4" style="text-align: right; margin-top: 22px; margin-right: 20px;">
+                       Hi, @User.Identity.Name
+                  </p>
+                }
               </ul>
-              <div class="user-items d-flex">
+              @if(User.Identity.IsAuthenticated) 
+              {
+                  <div class="user-items d-flex">
                 <ul class="d-flex justify-content-end list-unstyled mb-0">
                   <li class="search-item pe-3">
                     <a href="#" class="search-button">
@@ -270,76 +293,11 @@
                     </a>
                   </li>
                   <li class="pe-3">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                      <svg class="user">
+                  <a href="/Identity/Account/Profile" class="btn btn-link p-0">
+                     <svg class="user">
                         <use xlink:href="#user"></use>
                       </svg>
-                    </a>
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                      aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header border-bottom-0">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            <div class="tabs-listing">
-                              <nav>
-                                <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
-                                  <button class="nav-link text-capitalize active" id="nav-sign-in-tab" data-bs-toggle="tab"
-                                    data-bs-target="#nav-sign-in" type="button" role="tab" aria-controls="nav-sign-in"
-                                    aria-selected="true">Sign In</button>
-                                  <button class="nav-link text-capitalize" id="nav-register-tab" data-bs-toggle="tab"
-                                    data-bs-target="#nav-register" type="button" role="tab" aria-controls="nav-register"
-                                    aria-selected="false">Register</button>
-                                </div>
-                              </nav>
-                              <div class="tab-content" id="nav-tabContent">
-                                <div class="tab-pane fade active show" id="nav-sign-in" role="tabpanel"
-                                  aria-labelledby="nav-sign-in-tab">
-                                  <div class="form-group py-3">
-                                    <label class="mb-2" for="sign-in">Username or email address *</label>
-                                    <input type="text" minlength="2" name="username" placeholder="Your Username"
-                                      class="form-control w-100 rounded-3 p-3" required>
-                                  </div>
-                                  <div class="form-group pb-3">
-                                    <label class="mb-2" for="sign-in">Password *</label>
-                                    <input type="password" minlength="2" name="password" placeholder="Your Password"
-                                      class="form-control w-100 rounded-3 p-3" required>
-                                  </div>
-                                  <label class="py-3">
-                                    <input type="checkbox" required="" class="d-inline">
-                                    <span class="label-body">Remember me</span>
-                                    <span class="label-body"><a href="#" class="fw-bold">Forgot Password</a></span>
-                                  </label>
-                                  <button type="submit" name="submit" class="btn btn-dark w-100 my-3">Login</button>
-                                </div>
-                                <div class="tab-pane fade" id="nav-register" role="tabpanel"
-                                  aria-labelledby="nav-register-tab">
-                                  <div class="form-group py-3">
-                                    <label class="mb-2" for="register">Your email address *</label>
-                                    <input type="text" minlength="2" name="username" placeholder="Your Email Address"
-                                      class="form-control w-100 rounded-3 p-3" required>
-                                  </div>
-                                  <div class="form-group pb-3">
-                                    <label class="mb-2" for="sign-in">Password *</label>
-                                    <input type="password" minlength="2" name="password" placeholder="Your Password"
-                                      class="form-control w-100 rounded-3 p-3" required>
-                                  </div>
-                                  <label class="py-3">
-                                    <input type="checkbox" required="" class="d-inline">
-                                    <span class="label-body">I agree to the <a href="#" class="fw-bold">Privacy
-                                        Policy</a></span>
-                                  </label>
-                                  <button type="submit" name="submit" class="btn btn-dark w-100 my-3">Register</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  </a>
                   </li>
                   <li class="wishlist-dropdown dropdown pe-3">
                     <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
@@ -428,6 +386,8 @@
                   </li>
                 </ul>
               </div>
+              }
+              
             </div>
           </div>
         </div>
@@ -435,77 +395,7 @@
 
     </header>
 
-    <section id="billboard" class="position-relative d-flex align-items-center py-5 bg-light-gray"
-      style="background-image: url(images/banner-image-bg.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; height: 800px;">
-      <div class="position-absolute end-0 pe-0 pe-xxl-5 me-0 me-xxl-5 swiper-next main-slider-button-next">
-        <svg class="chevron-forward-circle d-flex justify-content-center align-items-center p-2" width="80" height="80">
-          <use xlink:href="#alt-arrow-right-outline"></use>
-        </svg>
-      </div>
-      <div class="position-absolute start-0 ps-0 ps-xxl-5 ms-0 ms-xxl-5 swiper-prev main-slider-button-prev">
-        <svg class="chevron-back-circle d-flex justify-content-center align-items-center p-2" width="80" height="80">
-          <use xlink:href="#alt-arrow-left-outline"></use>
-        </svg>
-      </div>
-      <div class="swiper main-swiper">
-        <div class="swiper-wrapper d-flex align-items-center">
-          <div class="swiper-slide">
-            <div class="container">
-              <div class="row d-flex flex-column-reverse flex-md-row align-items-center">
-                <div class="col-md-5 offset-md-1 mt-5 mt-md-0 text-center text-md-start">
-                  <div class="banner-content">
-                    <h2>The Fine Print Book Collection</h2>
-                    <p>Best Offer Save 30%. Grab it now!</p>
-                    <a href="index.html" class="btn mt-3">Shop Collection</a>
-                  </div>
-                </div>
-                <div class="col-md-6 text-center">
-                  <div class="image-holder">
-                    <img src="~/images/banner-image2.png" class="img-fluid" alt="banner">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="container">
-              <div class="row d-flex flex-column-reverse flex-md-row align-items-center">
-                <div class="col-md-5 offset-md-1 mt-5 mt-md-0 text-center text-md-start">
-                  <div class="banner-content">
-                    <h2>How Innovation works</h2>
-                    <p>Discount available. Grab it now!</p>
-                    <a href="index.html" class="btn mt-3">Shop Product</a>
-                  </div>
-                </div>
-                <div class="col-md-6 text-center">
-                  <div class="image-holder">
-                    <img src="~/images/banner-image1.png" class="img-fluid" alt="banner">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="container">
-              <div class="row d-flex flex-column-reverse flex-md-row align-items-center">
-                <div class="col-md-5 offset-md-1 mt-5 mt-md-0 text-center text-md-start">
-                  <div class="banner-content">
-                    <h2>Your Heart is the Sea</h2>
-                    <p>Limited stocks available. Grab it now!</p>
-                    <a href="index.html" class="btn mt-3">Shop Collection</a>
-                  </div>
-                </div>
-                <div class="col-md-6 text-center">
-                  <div class="image-holder">
-                    <img src="~/images/banner-image.png" class="img-fluid" alt="banner">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    
     @RenderBody()
     @await RenderSectionAsync("Scripts", required: false)
     

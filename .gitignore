@@ -2,5 +2,12 @@
 appsettings.json
 appsettings.*.json
 appsettings.Development.json
-
 .fake
+
+# Ignore binaries
+*.exe
+*.dll
+*.pdb
+*.cache
+bin/
+obj/

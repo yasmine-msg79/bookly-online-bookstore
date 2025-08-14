@@ -1,21 +1,29 @@
 using BookStore.Models;
+using BookStore.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using SQLitePCL;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Identity;
 
 namespace BookStore.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ApplicationDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ApplicationDbContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var bestSellingBooks = await _context.Books
+            .OrderByDescending(b => b.StockQuantity)
+            .Take(4)
+            .ToListAsync();
+            return View(bestSellingBooks);
         }
 
         public IActionResult Privacy()

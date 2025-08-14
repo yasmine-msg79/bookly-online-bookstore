@@ -28,10 +28,10 @@ namespace BookStore.Services
             _bookRepo.AddBook(book);
         }
 
-        public Book GetBook(string id)
-        {
-            return _bookRepo.GetByISBN(id);
-        }
+        // public Book GetBook(string id)
+        // {
+        //     return _bookRepo.GetByISBN(id);
+        // }
 
         public Book? GetBookById(int id)
         {
@@ -40,7 +40,7 @@ namespace BookStore.Services
 
         public void UpdateBook(Book book)
         {
-            if (_bookRepo.GetByISBN(book.ISBN) == null)
+            if (_bookRepo.GetById(book.Id) == null)
                 throw new Exception("Book not found.");
 
             _bookRepo.UpdateBook(book);
@@ -48,7 +48,7 @@ namespace BookStore.Services
 
         public void DeleteBook(int id)
         {
-            if (_bookRepo.GetByISBN(id.ToString()) == null)
+            if (_bookRepo.GetById(id) == null)
                 throw new Exception("Book not found.");
 
             _bookRepo.DeleteBook(id);
@@ -60,8 +60,7 @@ namespace BookStore.Services
         if (book == null)
             throw new Exception("Book not found.");
 
-        // Update stock
-        book.StockQuantity += quantityChange;
+        book.StockQuantity = quantityChange;
 
             // Prevent negative stock
             if (book.StockQuantity < 0)

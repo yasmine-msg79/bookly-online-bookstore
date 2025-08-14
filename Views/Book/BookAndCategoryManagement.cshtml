@@ -1,0 +1,242 @@
+@model BookAndCategoryViewModel
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Book & Category Management";
+}
+
+<div class="container mt-5">
+
+    <!-- TempData Messages -->
+    <div class="message-container text-center mb-3">
+        @if (TempData["AddMessage"] != null)
+        {
+            <div class="alert alert-success">@TempData["AddMessage"]</div>
+        }
+
+        @if (TempData["UpdateMessage"] != null)
+        {
+            <div class="alert alert-success">@TempData["UpdateMessage"]</div>
+        }
+
+        @if (TempData["DeleteMessage"] != null)
+        {
+            <div class="alert alert-danger">@TempData["DeleteMessage"]</div>
+        }
+    </div>
+
+    <!-- Books Section -->
+    <div class="mb-5">
+        <h2 class="text-pink d-flex justify-content-between align-items-center">
+            Books
+            <button type="button" class="btn btn-success" onclick="showAddBookModal()">Add Book</button>
+        </h2>
+
+        <table class="table table-bordered table-hover text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    @* <th>Category</th> *@
+                    <th>ISBN</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var book in Model.Books)
+                {
+                    <tr>
+                        <td>@book.Title</td>
+                        <td>@book.Author</td>
+                        @* <td>@book.CategoryName</td> *@
+                        <td>@book.ISBN</td>
+                        <td>
+                            <button type="button" class="btn btn-pink btn-sm" onclick="showUpdateBookModal(@book.Id)">Edit</button>
+                            <form asp-action="DeleteBook" asp-route-id="@book.Id" method="post" style="display:inline;">
+                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Categories Section -->
+    <div class="mb-5">
+        <h2 class="text-pink d-flex justify-content-between align-items-center">
+            Categories
+            <button type="button" class="btn btn-success" onclick="showAddCategoryModal()">Add Category</button>
+        </h2>
+
+        <table class="table table-bordered table-hover text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var cat in Model.Categories)
+                {
+                    <tr>
+                        <td>@cat.Name</td>
+                        <td>
+                            <button type="button" class="btn btn-pink btn-sm" onclick="showUpdateCategoryModal(@cat.Id)">Edit</button>
+                            <form asp-action="DeleteCategory" asp-route-id="@cat.Id" method="post" style="display:inline;">
+                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Add Book Modal -->
+<div id="addBookModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('addBookModal')">&times;</span>
+        <h4>Add Book</h4>
+        <form method="post" asp-action="AddBook">
+            <div class="mb-2"><label>Title *</label><input type="text" name="Title" class="form-control" required /></div>
+            <div class="mb-2"><label>Author *</label><input type="text" name="Author" class="form-control" required /></div>
+            <div class="mb-2"><label>ISBN *</label><input type="text" name="ISBN" class="form-control" required /></div>
+            <div class="mb-2"><label>Price</label><input type="number" step="0.01" name="Price" class="form-control" /></div>
+            <div class="mb-2"><label>Description *</label><input type="text" name="Description" class="form-control" required /></div>
+            <div class="mb-2">
+                <label>Category</label>
+                <select name="CategoryId" class="form-control">
+                    @foreach(var cat in Model.Categories)
+                    {
+                        <option value="@cat.Id">@cat.Name</option>
+                    }
+                </select>
+            </div>
+            <div class="text-end mt-2"><button type="submit" class="btn btn-pink">Confirm</button></div>
+        </form>
+    </div>
+</div>
+
+<!-- Update Book Modal -->
+<div id="updateBookModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('updateBookModal')">&times;</span>
+        <h4>Update Book</h4>
+        <form id="updateBookForm" method="post" asp-action="UpdateBook">
+            <input type="hidden" name="Id" />
+            <div class="mb-2"><label>Title *</label><input type="text" name="Title" class="form-control" required /></div>
+            <div class="mb-2"><label>Author *</label><input type="text" name="Author" class="form-control" required /></div>
+            <div class="mb-2"><label>ISBN *</label><input type="text" name="ISBN" class="form-control" required /></div>
+            <div class="mb-2"><label>Price</label><input type="number" step="0.01" name="Price" class="form-control" /></div>
+            <div class="mb-2"><label>Description *</label><input type="text" name="Description" class="form-control" required /></div>
+            <div class="mb-2">
+                <label>Category</label>
+                <select name="CategoryId" class="form-control">
+                    @foreach(var cat in Model.Categories)
+                    {
+                        <option value="@cat.Id">@cat.Name</option>
+                    }
+                </select>
+            </div>
+            <div class="text-end mt-2"><button type="submit" class="btn btn-pink">Confirm</button></div>
+        </form>
+    </div>
+</div>
+
+<!-- Add Category Modal -->
+<div id="addCategoryModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('addCategoryModal')">&times;</span>
+        <h4>Add Category</h4>
+        <form method="post" asp-action="AddCategory">
+            <input type="hidden" name="Id" value="0" />
+            <div class="mb-2">
+                <label>Name *</label>
+                <input type="text" name="Name" class="form-control" required />
+            </div>
+            <div class="text-end mt-2">
+                <button type="submit" class="btn btn-pink">Confirm</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Update Category Modal -->
+<div id="updateCategoryModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('updateCategoryModal')">&times;</span>
+        <h4>Update Category</h4>
+        <form method="post" asp-action="UpdateCategory" id="updateCategoryForm">
+            <input type="hidden" name="Id" />
+            <div class="mb-2">
+                <label>Name *</label>
+                <input type="text" name="Name" class="form-control" required />
+            </div>
+            <div class="text-end mt-2">
+                <button type="submit" class="btn btn-pink">Confirm</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+@section Scripts {
+<script>
+    // Book Modals
+    function showAddBookModal() {
+        document.getElementById("addBookModal").style.display = "block";
+    }
+
+    function showUpdateBookModal(id) {
+        fetch('@Url.Action("GetBook")?id=' + id)
+            .then(res => res.json())
+            .then(book => {
+                var form = document.getElementById("updateBookForm");
+                form.Id.value = book.id;
+                form.Title.value = book.title;
+                form.Author.value = book.author;
+                form.ISBN.value = book.isbn;
+                form.Price.value = book.price;
+                form.Description.value = book.description;
+                form.CategoryId.value = book.categoryId;
+                document.getElementById("updateBookModal").style.display = "block";
+            });
+    }
+
+    // Category Modals
+    function showAddCategoryModal() {
+    document.getElementById("addCategoryModal").style.display = "block";
+}
+
+    function showUpdateCategoryModal(id) {
+        fetch('@Url.Action("GetCategory")?id=' + id)
+            .then(res => res.json())
+            .then(cat => {
+                var form = document.getElementById("updateCategoryForm");
+                form.Id.value = cat.id;      
+                form.Name.value = cat.name;  
+                document.getElementById("updateCategoryModal").style.display = "block";
+            });
+    }
+
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+    }
+
+    // when clicking outside
+    window.onclick = function(event) {
+        ['addBookModal','updateBookModal','addCategoryModal','updateCategoryModal'].forEach(id => {
+            var modal = document.getElementById(id);
+            if (event.target == modal) modal.style.display = "none";
+        });
+    }
+</script>
+}
+
+}
