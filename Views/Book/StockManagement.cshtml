@@ -1,0 +1,71 @@
+@model List<BookManagementViewModel>
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Stock Management";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center text-pink mb-4">Stock Management</h2>
+
+    <form asp-action="ConfirmStock" method="post">
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success text-center">
+                @TempData["SuccessMessage"]
+            </div>
+        }
+
+        <table class="table table-bordered table-hover text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Stock</th>
+                    <th>Adjust</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    <tr>
+                        <td>
+                            @Model[i].Title
+                            <input type="hidden" asp-for="@Model[i].Id" />
+                        </td>
+                        <td>@Model[i].CategoryName</td>
+                        <td>
+                            <input type="number" name="[@i].StockQuantity" 
+                                   value="@Model[i].StockQuantity" 
+                                   class="form-control text-center stock-input" 
+                                   style="width:80px; display:inline-block;" readonly />
+                            <input type="hidden" name="[@i].Id" value="@Model[i].Id" />
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-pink btn-sm" onclick="decrease(@i)">-</button>
+                            <button type="button" class="btn btn-pink btn-sm" onclick="increase(@i)">+</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="text-center mt-4">
+            <button type="submit" class="btn btn-pink btn-lg">Confirm Changes</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        function increase(index) {
+            var input = document.querySelectorAll('.stock-input')[index];
+            input.value = parseInt(input.value) + 1;
+        }
+        function decrease(index) {
+            var input = document.querySelectorAll('.stock-input')[index];
+            if (parseInt(input.value) > 0)
+                input.value = parseInt(input.value) - 1;
+        }
+    </script>
+}
